@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — MicroFlip{% endblock %}
+{% block content %}
+<h1 class="text-2xl font-bold text-white mb-6">Dashboard</h1>
+
+<section class="mb-10">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold text-white">Meus Listings</h2>
+        <a href="/listings/new" class="text-emerald-400 hover:text-emerald-300 text-sm">+ Novo Listing</a>
+    </div>
+    {% if my_listings %}
+    <div class="space-y-3">
+        {% for l in my_listings %}
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 flex items-center justify-between">
+            <div>
+                <a href="/listings/{{ l.id }}" class="text-white font-semibold hover:text-emerald-400">{{ l.title }}</a>
+                <span class="status-badge status-{{ l.status }} ml-2">{{ l.status }}</span>
+                <span class="text-neutral-500 text-sm ml-2">{{ l.asking_price_usd|usd }}</span>
+                {% if l.mrr_verified %}<span class="badge-verified ml-2">MRR Verificado</span>{% endif %}
+            </div>
+            <a href="/listings/{{ l.id }}/edit" class="text-neutral-400 hover:text-white text-sm">Editar</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-neutral-500 text-sm">Nenhum listing ainda. <a href="/listings/new" class="text-emerald-400 hover:underline">Crie um</a>.</p>
+    {% endif %}
+</section>
+
+<section class="mb-10">
+    <h2 class="text-lg font-semibold text-white mb-4">Ofertas Recebidas</h2>
+    {% if received_offers %}
+    <div class="space-y-3">
+        {% for o in received_offers %}
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
+                    <span class="text-neutral-500 text-sm ml-2">para "{{ o.listing_title }}"</span>
+                    <span class="text-neutral-500 text-sm ml-2">de {{ o.buyer_name }}</span>
+                    <span class="status-badge status-{{ o.status }} ml-2">{{ o.status }}</span>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <a href="/offers/{{ o.id }}/messages" class="text-emerald-400 text-xs hover:underline">Chat</a>
+                    {% if o.status == 'pending' %}
+                    <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                        <input type="hidden" name="action" value="accepted">
+                        <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-1 rounded text-xs">Aceitar</button>
+                    </form>
+                    <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                        <input type="hidden" name="action" value="rejected">
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-xs">Rejeitar</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+            {% if o.message %}<p class="text-neutral-400 text-sm mt-2">{{ o.message }}</p>{% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-neutral-500 text-sm">Nenhuma oferta recebida.</p>
+    {% endif %}
+</section>
+
+<section>
+    <h2 class="text-lg font-semibold text-white mb-4">Minhas Ofertas Enviadas</h2>
+    {% if sent_offers %}
+    <div class="space-y-3">
+        {% for o in sent_offers %}
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 flex items-center justify-between">
+            <div>
+                <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
+                <span class="text-neutral-500 text-sm ml-2">em "{{ o.listing_title }}"</span>
+                <span class="text-neutral-500 text-sm ml-2">({{ o.seller_name }})</span>
+                <span class="status-badge status-{{ o.status }} ml-2">{{ o.status }}</span>
+            </div>
+            <a href="/offers/{{ o.id }}/messages" class="text-emerald-400 text-xs hover:underline">Chat</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-neutral-500 text-sm">Nenhuma oferta enviada.</p>
+    {% endif %}
+</section>
+{% endblock %}

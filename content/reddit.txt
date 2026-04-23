@@ -1,0 +1,39 @@
+Here's the Reddit post:
+
+---
+
+**Title:**
+
+The $500-$50k micro-SaaS exit gap is real and nobody's fixing it
+
+**Body:**
+
+I've been thinking about this for a while and wanted to get the community's take.
+
+If you're running a micro-SaaS doing $500-$5k MRR and you want to sell — where do you actually go?
+
+Flippa used to be the default, but let's be honest: it's become a graveyard of inflated screenshots and unverifiable metrics. I've seen listings where the "verified revenue" was literally just a Stripe screenshot from a good month. Buyers got burned, sellers got lowballed, and trust evaporated.
+
+Acquire.com is solid but they're clearly optimized for bigger deals. If your SaaS does $2k MRR, you're basically invisible on their platform. The economics don't work for them to give you attention.
+
+Empire Flippers? Minimum listing is like $100k+ valuation. They're not even pretending to care about the little guys.
+
+So what happens to the indie hacker who built a profitable little tool, maybe got bored, maybe wants to fund the next project, and just wants a clean exit in the $5k-$50k range? From what I've seen, they end up:
+
+1. Posting in random Twitter DMs or Discord servers
+2. Selling to someone they vaguely know for way under value
+3. Just letting it die because the friction of selling is too high
+
+This is wild to me. There's a whole segment of profitable, transferable software products that essentially have no liquid market. We're not talking about dead projects — these are things with paying users, working infrastructure, and real MRR.
+
+The irony is that this price range is actually perfect for first-time buyers. Someone who wants to skip the 0-to-1 phase and buy a working SaaS for $10k-$30k? That's an incredible entry point. Way less risky than building from scratch. But without a trusted marketplace with actually verified metrics (not self-reported, not screenshot-based — I mean connected-to-Stripe verified), buyers don't feel safe pulling the trigger either.
+
+I think the missing piece is trust infrastructure at the lower end. Escrow, verified MRR, transparent churn data, maybe even a standardized due diligence checklist for small deals. The tooling exists to do this — it just hasn't been packaged for this tier.
+
+Some people argue this market is too small to matter, but I disagree. The volume of micro-SaaS products being built right now is insane. AI tools are making it even easier to ship. The supply side is exploding, but the exit liquidity hasn't kept up.
+
+For those of you who've sold (or tried to sell) a small SaaS — what was your experience like? Did you find a buyer through a platform or was it all relationship-based? And if you've bought one: what would've made you feel more confident in the transaction?
+
+---
+
+**Stats:** ~2,100 characters. Title is 62 characters. Ends with a genuine discussion question. No product name mentioned, no links, no CTA — reads as an observation post from someone in the space.

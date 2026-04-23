@@ -1,0 +1,27 @@
+Here's the thread:
+
+---
+
+**1/8**
+Você construiu um micro-SaaS com $2k de MRR. Quer vender. E aí descobre: Flippa virou terra de ninguém, Acquire nem olha pra deal abaixo de $100k, Empire Flippers exige escala que você não tem. E agora?
+
+**2/8**
+Existe um limbo no mercado de aquisições. Produtos entre $500 e $50k são pequenos demais pros marketplaces tradicionais — mas lucrativos demais pra morrer no abandono.
+
+**3/8**
+Milhares de indie hackers constroem micro-SaaS rentáveis e ficam presos neles. Sem energia pra escalar, sem canal pra vender. O projeto vira um peso, não um ativo.
+
+**4/8**
+MicroFlip é um marketplace feito exclusivamente pra essa faixa: micro-SaaS de $500 a $50k. Métricas verificadas, sem lixo, sem projetos fantasma.
+
+**5/8**
+A diferença é simples: cada listagem passa por verificação de MRR, churn e receita antes de ir ao ar. Comprador vê números reais, não capturas de tela editáveis.
+
+**6/8**
+Pra quem vende: um canal onde seu micro-SaaS de $3k não compete com empresas de $500k por atenção. Pra quem compra: deal flow curado na faixa que realmente cabe no bolso de um solo founder.
+
+**7/8**
+O melhor exit nem sempre é o maior. Às vezes é vender um projeto de $1.5k/mês por $18k e usar esse capital pra construir o próximo 🚀
+
+**8/8**
+Se você tem um micro-SaaS lucrativo parado ou quer adquirir um sem gastar seis dígitos, vale conhecer → https://microflip.vercel.app

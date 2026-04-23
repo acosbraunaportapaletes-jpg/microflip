@@ -1,0 +1,62 @@
+# Roteiro YouTube Short — MicroFlip
+
+**Duração estimada:** 50s
+
+---
+
+**[0-3s — PATTERN INTERRUPT]**
+
+*(Olhar direto pra câmera, tom de "segredo")*
+
+"Esse cara comprou um SaaS por 800 reais... e tá faturando 3 mil por mês com ele."
+
+[CORTE]
+
+---
+
+**[BEAT 1 — O Problema] (3-15s)**
+
+"Todo mundo quer criar um SaaS do zero. Passa 6 meses codando, gasta uma fortuna em infra, e no final... zero clientes."
+
+[B-ROLL: tela com código sendo deletado, gráfico de receita zerado]
+
+[CORTE]
+
+---
+
+**[BEAT 2 — A Virada] (15-35s)**
+
+"E se em vez de criar, você comprasse um que já tá funcionando? No MicroFlip você encontra micro-SaaS de 500 a 50 mil dólares — com métricas verificadas. Receita, churn, custo de servidor... tudo aberto."
+
+[B-ROLL: tela da plataforma com dashboard de métricas, lista de projetos à venda]
+
+"É tipo um marketplace de negócios digitais que já foram validados por outra pessoa."
+
+[CORTE]
+
+---
+
+**[BEAT 3 — Prova Social] (35-50s)**
+
+"Tem gente comprando projetos pequenos, otimizando com IA, e revendendo pelo dobro em 90 dias. Isso é o que o pessoal lá fora chama de micro-flipping."
+
+[B-ROLL: print de transação, antes/depois de receita crescendo]
+
+[CORTE]
+
+---
+
+**[CTA] (50-55s)**
+
+*(Aproxima da câmera)*
+
+"Link tá na bio. Vai lá, filtra por faixa de preço e acha o seu primeiro micro-SaaS lucrativo."
+
+[B-ROLL: dedo clicando no link da bio, tela do MicroFlip abrindo]
+
+---
+
+**Notas de produção:**
+- Música: lo-fi beat leve, sobe nos cortes
+- Legendas: palavras-chave em destaque (amarelo/branco bold)
+- Ritmo: frases curtas, pausas mínimas entre beats

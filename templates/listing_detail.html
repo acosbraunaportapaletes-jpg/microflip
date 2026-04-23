@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}{{ listing.title }} — MicroFlip{% endblock %}
+{% block content %}
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2">
+        {% if listing.screenshot_url %}
+        <img src="{{ listing.screenshot_url }}" alt="" class="w-full h-64 object-cover rounded-lg mb-4 bg-neutral-800">
+        {% endif %}
+        <div class="flex items-center gap-3 mb-2">
+            <h1 class="text-2xl font-bold text-white">{{ listing.title }}</h1>
+            <span class="status-badge status-{{ listing.status }}">{{ listing.status }}</span>
+        </div>
+        <p class="text-neutral-500 text-sm mb-4">por {{ listing.seller_name }} &middot; {{ listing.created_at|timeago }}</p>
+        {% if listing.url %}
+        <p class="text-sm mb-4"><a href="{{ listing.url }}" target="_blank" class="text-emerald-400 hover:underline">{{ listing.url }}</a></p>
+        {% endif %}
+        <div class="text-neutral-300 leading-relaxed whitespace-pre-line">{{ listing.description }}</div>
+
+        {% if mrr_data %}
+        <div class="mt-8">
+            <h3 class="text-lg font-semibold text-white mb-3">Receita mensal (via Stripe) <span class="badge-verified">MRR Verificado</span></h3>
+            <div class="grid grid-cols-6 gap-2">
+                {% for m in mrr_data %}
+                <div class="bg-neutral-900 border border-neutral-800 rounded p-3 text-center">
+                    <div class="text-xs text-neutral-500">{{ m.month }}</div>
+                    <div class="text-emerald-400 font-semibold text-sm mt-1">${{ m.revenue }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if current_user and current_user.id == listing.seller_id %}
+        <div class="mt-8 flex gap-3">
+            <a href="/listings/{{ listing.id }}/edit" class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded text-sm">Editar</a>
+            {% if not listing.mrr_verified %}
+            <form action="/listings/{{ listing.id }}/verify" method="post" class="inline">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Verificar MRR via Stripe</button>
+            </form>
+            {% endif %}
+        </div>
+
+        {% if offers %}
+        <div class="mt-8">
+            <h3 class="text-lg font-semibold text-white mb-3">Ofertas recebidas</h3>
+            <div class="space-y-3">
+                {% for o in offers %}
+                <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-white font-semibold">{{ o.amount_usd|usd }}</span>
+                            <span class="text-neutral-500 text-sm ml-2">de {{ o.buyer_name }}</span>
+                            <span class="status-badge status-{{ o.status }} ml-2">{{ o.status }}</span>
+                        </div>
+                        {% if o.status == 'pending' %}
+                        <div class="flex gap-2">
+                            <form action="/offers/{{ o.id }}/respond" method="post">
+                                <input type="hidden" name="action" value="accepted">
+                                <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-xs">Aceitar</button>
+                            </form>
+                            <form action="/offers/{{ o.id }}/respond" method="post">
+                                <input type="hidden" name="action" value="rejected">
+                                <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs">Rejeitar</button>
+                            </form>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% if o.message %}
+                    <p class="text-neutral-400 text-sm mt-2">{{ o.message }}</p>
+                    {% endif %}
+                    <a href="/offers/{{ o.id }}/messages" class="text-emerald-400 text-xs hover:underline mt-2 inline-block">Chat</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+
+    <div class="lg:col-span-1">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-6 sticky top-6">
+            <div class="text-3xl font-bold text-emerald-400 mb-2">{{ listing.asking_price_usd|usd }}</div>
+            <div class="text-neutral-400 text-sm mb-4">asking price</div>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-white font-semibold">MRR: {{ listing.mrr_usd|usd }}</span>
+                {% if listing.mrr_verified %}
+                <span class="badge-verified">Verificado</span>
+                {% else %}
+                <span class="text-neutral-500 text-xs">(declarado)</span>
+                {% endif %}
+            </div>
+            {% if listing.mrr_usd and listing.mrr_usd > 0 %}
+            <div class="text-neutral-500 text-sm mb-6">
+                Múltiplo: {{ "%.1f"|format(listing.asking_price_usd / listing.mrr_usd) }}x MRR
+            </div>
+            {% endif %}
+
+            {% if current_user and current_user.id != listing.seller_id and listing.status == 'active' %}
+            <form action="/listings/{{ listing.id }}/offer" method="post" class="space-y-3">
+                <div>
+                    <label class="block text-xs text-neutral-500 mb-1">Sua oferta (USD)</label>
+                    <input type="number" name="amount" required min="1" value="{{ listing.asking_price_usd }}" class="w-full bg-neutral-800 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs text-neutral-500 mb-1">Mensagem (opcional)</label>
+                    <textarea name="message" rows="3" placeholder="Conte por que você está interessado..." class="w-full bg-neutral-800 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm">Enviar Oferta</button>
+            </form>
+            {% elif not current_user and listing.status == 'active' %}
+            <a href="/login" class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm">Login para fazer oferta</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

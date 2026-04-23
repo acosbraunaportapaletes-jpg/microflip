@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Chat — MicroFlip{% endblock %}
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+        <div>
+            <h1 class="text-xl font-bold text-white">Chat — Oferta de {{ offer.amount_usd|usd }}</h1>
+            <p class="text-neutral-500 text-sm">Listing: {{ offer.listing_title }}</p>
+        </div>
+        <span class="status-badge status-{{ offer.status }}">{{ offer.status }}</span>
+    </div>
+
+    <div id="message-list" class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 min-h-[300px] max-h-[500px] overflow-y-auto mb-4 space-y-3">
+        {% include "_messages.html" %}
+    </div>
+
+    <form hx-post="/offers/{{ offer.id }}/messages" hx-target="#message-list" hx-swap="innerHTML" class="flex gap-2"
+          _="on htmx:afterSwap set me.querySelector('[name=body]').value to ''">
+        <input type="text" name="body" required placeholder="Digite sua mensagem..." autofocus
+               class="flex-1 bg-neutral-900 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none">
+        <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded text-sm font-semibold">Enviar</button>
+    </form>
+</div>
+<script>
+document.body.addEventListener('htmx:afterSwap', function() {
+    var el = document.getElementById('message-list');
+    el.scrollTop = el.scrollHeight;
+    var input = document.querySelector('[name=body]');
+    if (input) input.value = '';
+});
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById('message-list');
+    el.scrollTop = el.scrollHeight;
+});
+</script>
+{% endblock %}
