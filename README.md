@@ -1,26 +1,25 @@
 # MicroFlip
 
-Compre e venda micro-SaaS de $500 a $50k com métricas de receita verificadas via Stripe.
+Buy and sell micro-SaaS projects from $500 to $50k — verified revenue.
 
-## Como rodar
+## How to run
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env   # edite com suas credenciais
+cp .env.example .env   # edit with your credentials
 python app.py
 ```
 
-Acesse http://localhost:5000
+Open http://localhost:5000
 
-## Features implementadas
+## Features
 
-- **Auth** — Cadastro e login com email+senha, hash seguro via werkzeug, sessão via cookie
-- **Listings** — Criação, edição e browse de listings com screenshot upload, status draft/active/sold
-- **Stripe Verify** — Integração OAuth com Stripe para verificar MRR real dos últimos 6 meses (badge "MRR Verificado")
-- **Browse & Search** — Página pública com filtros por faixa de preço e MRR, ordenação por recente/preço, busca por texto
-- **Ofertas** — Buyer envia oferta com valor + mensagem; seller aceita/rejeita no painel
-- **Chat** — Mensagens em tempo real (htmx) entre buyer e seller após match de oferta
-- **Dashboard** — Painel unificado com meus listings, ofertas recebidas e enviadas
+- **Auth** — Sign up and log in with email + password, secure hash via werkzeug, session cookies
+- **Listings** — Create, edit, and browse listings with title, description, URL, asking price, MRR, stack, screenshot upload
+- **Stripe Verify** — Connect Stripe via OAuth (read-only) to verify real MRR; listings get a "Revenue Verified" badge
+- **Browse & Search** — Public directory with filters by price range, MRR range, stack, and sort by recency/price/MRR
+- **Contact Intent** — Logged-in buyers click "I'm Interested"; seller receives email with buyer's profile and message
+- **Dashboard** — View your listings, verify MRR status, and see all received interest with buyer contact info
 
 ## Stack
 
@@ -28,11 +27,11 @@ Acesse http://localhost:5000
 - SQLite
 - htmx + Tailwind CSS (via CDN)
 
-## Próximos passos
+## Next steps
 
-- Notificação por email quando oferta é recebida (SMTP já previsto nas env vars)
-- Integração de pagamento/escrow via Stripe para transações seguras
-- Upload de screenshots para S3/Cloudflare R2 em vez de disco local
-- Sistema de avaliação/rating pós-venda
-- API REST para integrações externas
-- Deploy com Docker + Gunicorn
+- Escrow payments via Stripe for secure transactions
+- In-app messaging thread between buyer and seller
+- Upload screenshots to S3/Cloudflare R2 instead of local disk
+- Post-sale rating and review system
+- Admin panel for moderation
+- Deploy with Docker + Gunicorn

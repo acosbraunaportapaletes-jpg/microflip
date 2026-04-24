@@ -2,99 +2,100 @@
   "slug": "microflip",
   "idea": "Onde vender um SaaS fazendo 500-5k/mês? Flippa é duvidoso, Acquire não pega. Vou construir um.\n\nI'm a solo builder, been sitting on this idea for a while and I want to pressure-test it before I start building.\n\nThe gap I keep seeing:\n\n\\- Flippa's trust is gone (literally a \"flippascam(dot)com\" exists)\n\n\\- Acquire won't touch anything under $50k\n\n\\- Empire Flippers is a very high barrier to entry\n\nThere's nothing clean for the $500–$50k range where most of us actually build and operate.\n\n**So",
   "source_ref": "lead:1stw5v4",
-  "started_at": "2026-04-23T23:00:30.120847+00:00",
-  "finished_at": "2026-04-23T23:07:08.441281+00:00",
+  "started_at": "2026-04-24T23:00:27.413771+00:00",
+  "finished_at": "2026-04-24T23:07:40.527462+00:00",
   "research": {
-    "problema": "Criadores de micro-SaaS com MRR $500-$5k não têm marketplace confiável para vender — Flippa perdeu credibilidade, Acquire ignora deals pequenos, Empire Flippers exige escala alta",
-    "quem_sente": "Indie hacker / solo founder com micro-SaaS lucrativo querendo exit parcial ou total na faixa $500-$50k",
-    "quanto_pagariam_usd_mes": "29-149 (listing fee) ou 5-10% comissão por deal fechado",
-    "tam_brasil": "medio",
+    "problema": "Founders de micro-SaaS não têm onde vender projetos de $500-$50k com confiança — Flippa perdeu credibilidade, Acquire ignora deals pequenos, Empire Flippers exige escala",
+    "quem_sente": "Solo founder / indie hacker que construiu um micro-SaaS lucrativo e quer fazer exit ou comprar um projeto rodando",
+    "quanto_pagariam_usd_mes": "0 (commission-based: 5-10% por transação) ou 29-99 listing fee",
+    "tam_brasil": "baixo",
     "concorrencia": [
-      "Flippa — gratuito a $39/listing, reputação destruída mas ainda tem tráfego",
-      "Acquire.com — grátis para listar, foco em deals >$50k, ignora micro",
-      "Empire Flippers — comissão 15%, barreira de $100k+ valuation",
-      "MicroMRR / Tiny Acquisitions — nicho mas com pouca tração",
-      "Twitter/IndieHackers — informal, zero proteção, zero escrow"
+      "Flippa — grátis a $49/listing, enorme mas trust destruído",
+      "Acquire.com (ex-MicroAcquire) — grátis pra listar, foco $50k+, curadoria fraca no low-end",
+      "Empire Flippers — commission 15%, barreira mínima ~$50k",
+      "SideProjectors — grátis, baixo volume, sem escrow",
+      "1KProjects — $99 flat, nicho mas pouco tráfego",
+      "IndieHackers/Twitter — $0, sem estrutura nem proteção"
     ],
-    "diferencial_com_ia": "Valuation automatizado por IA baseado em métricas reais (Stripe, analytics) + due diligence assistida que reduz fricção de deals pequenos",
+    "diferencial_com_ia": "IA pode fazer valuation automatizado, due diligence de métricas (Stripe/Analytics), e match buyer-seller por perfil — reduz fricção que mata marketplaces pequenos",
     "riscos": [
-      "Chicken-and-egg: sem sellers não vêm buyers e vice-versa — cold start problem clássico de marketplace",
-      "Unit economics frágeis: comissão de 10% sobre deal de $5k = $500 por transação, precisa de volume alto",
-      "Risco regulatório/legal: intermediar transações financeiras exige compliance (escrow, KYC) que custa caro para solo dev"
+      "Chicken-and-egg: sem sellers não vêm buyers, sem buyers não vêm sellers",
+      "Trust é o produto inteiro e leva anos pra construir — um scam público mata a marca",
+      "Acquire.com pode descer o threshold a qualquer momento e comer o mercado"
     ],
     "bayes": {
       "prior": 0.12,
       "evidencias_plus": [
-        "Dor articulada com especificidade — flippascam.com existe, gap de $500-$50k é real e documentado",
-        "Mercado de micro-SaaS em expansão acelerada (mais builders = mais deals potenciais)",
-        "Incumbente líder (Flippa) com reputação em queda livre cria janela de oportunidade",
-        "Nenhuma solução limpa e confiável ocupa o nicho — clientes estão underserved"
+        "Dor específica e articulada — FlippaScam.com existe como evidência social do gap",
+        "Gap real entre $500 e $50k — nenhum player curado atende bem essa faixa",
+        "Crescimento explosivo de micro-SaaS via AI tools → mais supply de projetos pra vender",
+        "Founder tem experiência pessoal com a dor (skin in the game)"
       ],
       "evidencias_minus": [
-        "Marketplace é o modelo mais difícil de bootstrappear — cold start mata 90% das tentativas",
-        "Deals pequenos geram comissões pequenas — unit economics podem não fechar",
-        "Concorrência informal (Twitter, comunidades) resolve 'good enough' para muitos",
-        "Confiança em transações financeiras exige marca forte que leva anos para construir"
+        "Marketplace é o modelo de negócio mais difícil — cold start problem",
+        "Mercado de transações sub-$50k tem ticket baixo → comissões pequenas em valor absoluto",
+        "Acquire.com já tentou este segmento e priorizou up-market — possível sinal de que unit economics não fecha",
+        "Concorrência fragmentada mas existente — 5+ alternativas já operam"
       ],
       "posterior": 0.17,
-      "justificativa_posterior": "Dor real e gap verificável sobem o prior, mas dinâmica de marketplace e unit economics frágeis limitam o uplift a +5pp"
+      "justificativa_posterior": "Dor é real e evidenciada mas marketplace B2B de baixo ticket é notoriamente difícil de escalar — posterior sobe moderadamente do prior"
     },
     "mcda": {
       "mercado": {
         "score": 6,
-        "nota": "Globalmente ~200-500k indie hackers, ~5-10% consideram exit em qualquer ano = 10-50k potenciais sellers. Nicho mas growing."
+        "nota": "Globalmente ~100k indie hackers ativos, mas sub-segmento que quer comprar/vender é ~10-15k; no BR isolado é pequeno demais, precisa ser global desde dia 1"
       },
       "disposicao_pagar": {
         "score": 5,
-        "nota": "Quem vende SaaS por $10-50k paga comissão, mas deals de $500-$2k têm willingness-to-pay muito baixa — ticket médio puxa pra baixo."
+        "nota": "Sellers pagam quando vendem (commission), buyers pagam quando compram — disposição existe no momento da transação mas é zero fora dele; ARPU depende de volume"
       },
       "viabilidade_tecnica": {
-        "score": 8,
-        "nota": "MVP de listing + Stripe Connect + chat é factível em 2-3 semanas para 1 dev. Escrow próprio é complexo mas pode usar terceiro."
+        "score": 4,
+        "nota": "Listing + busca = 2 semanas; mas escrow, verificação de receita via API, dispute resolution = 2-3 meses pra MVP confiável"
       },
       "moat": {
         "score": 3,
-        "nota": "Sem moat técnico. Network effect é o único moat mas leva anos. Qualquer concorrente com distribuição (IndieHackers, Twitter influencer) replica rápido."
+        "nota": "Sem moat técnico — o moat é reputação e liquidez, ambos levam anos; Acquire pode descer threshold amanhã"
       },
       "timing": {
         "score": 7,
-        "nota": "Boom de IA criou onda de novos micro-SaaS — mais produtos = mais exits. Flippa em declínio abre janela. Timing é favorável mas não exclusivo."
+        "nota": "AI tools (Cursor, Bolt, Replit Agent) explodiram criação de micro-SaaS → mais projetos construídos → mais founders querendo vender → supply side cresce organicamente"
       },
-      "score_ponderado": 5.75
+      "score_ponderado": 5.2
     },
     "fermi": {
-      "n_clientes_br": 3500,
-      "ticket_mensal_brl": 150,
-      "conversao_esperada": 0.012,
+      "n_clientes_br": 3000,
+      "ticket_mensal_brl": 99,
+      "conversao_esperada": 0.015,
       "cenarios": {
         "bull": {
           "p": 0.2,
-          "mrr_ano1_brl": 12000
+          "mrr_ano1_brl": 15000
         },
         "base": {
           "p": 0.5,
-          "mrr_ano1_brl": 3500
+          "mrr_ano1_brl": 4000
         },
         "bear": {
           "p": 0.3,
           "mrr_ano1_brl": 600
         }
       },
-      "expected_value_mrr_brl": 4330
+      "expected_value_mrr_brl": 5180
     },
     "red_team": {
-      "risk_manager": "Fraude no primeiro deal grande destrói a reputação da plataforma inteira — sem budget para escrow/compliance robusto, um scam viral mata o produto. Risco binário real.",
-      "cliente_cetico": "Por que pago listing fee se posso postar no Twitter com hashtag #microsaasfordale e fechar direto? Acquire é grátis pra listar. Só pago se você me trouxer buyer qualificado — e pra isso precisa ter tráfego que você ainda não tem.",
-      "fundador_senior": "Vi TransferSlot, SideProjectors, 1KProjects, MicroMRR — todos tentaram exatamente isso e estagnaram. Marketplace de deals pequenos não gera receita suficiente pra justificar o custo de confiança e moderação. O padrão é: lança, consegue 50 listings, buyers não aparecem, sellers desistem, morre em 8 meses."
+      "risk_manager": "Cold start é risco binário: se nos primeiros 90 dias não conseguir 50 listings reais com receita verificada, buyers não vêm, sellers desistem, e o marketplace morre antes de nascer — não é iterável, é binário",
+      "cliente_cetico": "Por que pagaria comissão se posso postar no Twitter/IndieHackers de graça e fechar via DM? Só pago se você me trouxer buyers qualificados que eu não acharia sozinho — e pra isso você precisa de escala que ainda não tem",
+      "fundador_senior": "Já vi MicroAcquire, Transferslot, SideProjectors, 1KProjects tentarem esse exato segmento — todos ou pivotaram up-market ou estagnaram sub-$2k MRR; o problema não é construir o marketplace, é que transações sub-$50k não geram receita suficiente por deal pra justificar custo de aquisição de ambos os lados"
     },
     "veredito": "CAUTION",
     "confianca_veredito_pct": 52,
-    "motivo_veredito": "Dor genuína e timing favorável (posterior 0.17, acima do prior), mas MCDA 5.75 abaixo do threshold de confiança, unit economics frágeis em deals pequenos, e o red team levanta o padrão histórico de marketplaces de micro-deals que estagnam — como info-produto (guia de exit para indie hackers) o risco cai a zero e a tese se sustenta, mas como marketplace SaaS o cold-start problem é o killer risk sem resposta clara."
+    "motivo_veredito": "Dor real e timing favorável (posterior 0.17, MCDA 5.2, EV R$5.2k), mas o cold-start problem de marketplace é risco binário sem resposta convincente — o fundador sênior tem razão que predecessores neste exato segmento estagnaram; vale testar com approach não-marketplace primeiro (curadoria manual, newsletter de deals, diretório) antes de investir em plataforma completa"
   },
   "spec": {
     "name": "MicroFlip",
     "slug": "microflip",
-    "pitch": "Compre e venda micro-SaaS de $500 a $50k com métricas verificadas.",
+    "pitch": "Buy and sell micro-SaaS projects from $500 to $50k — verified revenue.",
     "stack": [
       "python",
       "flask",
@@ -104,41 +105,37 @@
     "core_features": [
       {
         "id": "auth",
-        "desc": "Cadastro e login com email+senha, hash bcrypt, sessão via cookie seguro"
+        "desc": "Login com email+senha, hash bcrypt, sessão via cookie seguro"
       },
       {
         "id": "listings",
-        "desc": "Seller cria listing com nome, descrição, URL, MRR declarado, asking price, screenshot — status draft/active/sold"
+        "desc": "Criar/editar listing: nome, descrição, URL, asking price, MRR declarado, stack, screenshot"
       },
       {
         "id": "stripe-verify",
-        "desc": "Seller conecta Stripe via OAuth — sistema puxa MRR real dos últimos 6 meses e exibe badge 'MRR Verificado' no listing"
+        "desc": "Conectar Stripe OAuth read-only pra verificar MRR real — badge 'Revenue Verified' no listing"
       },
       {
         "id": "browse-search",
-        "desc": "Página pública com listings ativos, filtro por faixa de preço e MRR, ordenação por recente/preço — sem login pra ver"
+        "desc": "Diretório público com filtro por faixa de preço, MRR, stack e ordenação por recência"
       },
       {
-        "id": "offers",
-        "desc": "Buyer logado envia oferta (valor + mensagem) no listing — seller recebe email e aceita/rejeita no painel, chat simples entre as partes após match"
+        "id": "contact-intent",
+        "desc": "Buyer logado clica 'I'm Interested' → seller recebe email com perfil do buyer; thread básica por email, sem chat in-app"
       }
     ],
     "db_tables": [
       {
         "name": "users",
-        "columns": "id PK, email UNIQUE, password_hash, name, role ENUM(seller,buyer,both), stripe_account_id NULL, created_at"
+        "columns": "id PK, email UNIQUE, password_hash, name, bio, is_verified BOOL DEFAULT 0, created_at"
       },
       {
         "name": "listings",
-        "columns": "id PK, seller_id FK users, title, description TEXT, url, asking_price_usd INT, mrr_usd INT, mrr_verified BOOL DEFAULT 0, stripe_mrr_data JSON NULL, screenshot_url, status ENUM(draft,active,sold) DEFAULT draft, created_at, updated_at"
+        "columns": "id PK, user_id FK, title, description TEXT, url, asking_price_usd INT, mrr_usd INT, stack TEXT, screenshot_url, stripe_verified BOOL DEFAULT 0, stripe_account_id, status ENUM('draft','active','sold') DEFAULT 'draft', created_at, updated_at"
       },
       {
-        "name": "offers",
-        "columns": "id PK, listing_id FK listings, buyer_id FK users, amount_usd INT, message TEXT, status ENUM(pending,accepted,rejected,withdrawn) DEFAULT pending, created_at"
-      },
-      {
-        "name": "messages",
-        "columns": "id PK, offer_id FK offers, sender_id FK users, body TEXT, created_at"
+        "name": "intents",
+        "columns": "id PK, listing_id FK, buyer_id FK, message TEXT, created_at"
       }
     ],
     "routes": [
@@ -146,13 +143,13 @@
         "path": "/",
         "method": "GET",
         "handler": "index",
-        "desc": "Landing page com value prop + listings recentes em destaque"
+        "desc": "Landing com hero + últimos 6 listings verificados"
       },
       {
-        "path": "/register",
+        "path": "/signup",
         "method": "GET|POST",
-        "handler": "register",
-        "desc": "Cadastro de usuário"
+        "handler": "signup",
+        "desc": "Cadastro"
       },
       {
         "path": "/login",
@@ -169,62 +166,50 @@
       {
         "path": "/listings",
         "method": "GET",
-        "handler": "browse_listings",
-        "desc": "Browse público com filtros de preço e MRR"
+        "handler": "browse",
+        "desc": "Diretório público com filtros"
       },
       {
         "path": "/listings/new",
         "method": "GET|POST",
         "handler": "create_listing",
-        "desc": "Seller cria novo listing"
+        "desc": "Formulário de criação de listing (auth required)"
       },
       {
         "path": "/listings/<id>",
         "method": "GET",
-        "handler": "view_listing",
-        "desc": "Detalhe do listing com badge de verificação e botão de oferta"
+        "handler": "show_listing",
+        "desc": "Detalhe do listing com badge de verificação"
       },
       {
         "path": "/listings/<id>/edit",
         "method": "GET|POST",
         "handler": "edit_listing",
-        "desc": "Seller edita listing próprio"
+        "desc": "Editar listing (owner only)"
       },
       {
-        "path": "/listings/<id>/verify",
+        "path": "/listings/<id>/interest",
         "method": "POST",
-        "handler": "start_stripe_verify",
-        "desc": "Inicia OAuth do Stripe pra verificar MRR"
+        "handler": "send_interest",
+        "desc": "Buyer envia interesse (auth required, dispara email ao seller)"
       },
       {
-        "path": "/stripe/callback",
+        "path": "/connect/stripe",
+        "method": "GET",
+        "handler": "stripe_oauth",
+        "desc": "Inicia OAuth com Stripe read-only"
+      },
+      {
+        "path": "/connect/stripe/callback",
         "method": "GET",
         "handler": "stripe_callback",
-        "desc": "Callback OAuth — puxa dados do Stripe e marca mrr_verified"
-      },
-      {
-        "path": "/listings/<id>/offer",
-        "method": "POST",
-        "handler": "create_offer",
-        "desc": "Buyer envia oferta"
-      },
-      {
-        "path": "/offers/<id>/respond",
-        "method": "POST",
-        "handler": "respond_offer",
-        "desc": "Seller aceita ou rejeita oferta"
-      },
-      {
-        "path": "/offers/<id>/messages",
-        "method": "GET|POST",
-        "handler": "offer_messages",
-        "desc": "Chat entre buyer e seller após oferta"
+        "desc": "Callback Stripe, puxa MRR e marca verified"
       },
       {
         "path": "/dashboard",
         "method": "GET",
         "handler": "dashboard",
-        "desc": "Painel do usuário — meus listings, ofertas recebidas/enviadas"
+        "desc": "Meus listings + intents recebidos"
       }
     ],
     "env_vars": [
@@ -232,15 +217,16 @@
       "DATABASE_URL",
       "STRIPE_CLIENT_ID",
       "STRIPE_API_KEY",
-      "MAIL_SERVER",
-      "MAIL_DEFAULT_SENDER"
+      "SMTP_HOST",
+      "SMTP_USER",
+      "SMTP_PASS"
     ],
     "pricing_plan": {
-      "free": "Browsing ilimitado, enviar até 3 ofertas/mês, criar 1 listing sem verificação",
-      "pro": "R$97/mês — listings ilimitados, verificação Stripe, badge 'Seller Verificado', ofertas ilimitadas, destaque nos resultados de busca"
+      "free": "Browsing ilimitado, 1 listing ativo, contato com sellers (buyer sempre grátis)",
+      "pro": "R$49/mês — até 10 listings ativos, badge 'Pro Seller', posição prioritária no browse, acesso a intents ilimitados"
     }
   },
-  "build_summary": "Todos os arquivos do MicroFlip foram criados e estão prontos para rodar. O projeto inclui: `app.py` (~310 linhas) com todas as 14 rotas funcionais (auth, listings CRUD, browse com filtros, Stripe OAuth para verificação de MRR, ofertas com aceitar/rejeitar, chat via htmx), 10 templates Jinja2 com Tailwind CDN + htmx, init automático do SQLite no startup, upload de screenshots para disco local, `requirements.txt` mínimo, `.env.example`, `README.md` com instruções, e `landing.html` estático com design escuro pronto para deploy em Netlify/Vercel. Basta rodar `pip install -r requirements.txt && python app.py` para subir em `localhost:5000`.",
+  "build_summary": "All files created and verified. Here's what was built:\n\n**MicroFlip MVP** — a complete Flask app with 8 templates, all routes from the spec working. `app.py` (~348 lines of logic) includes: auto-init SQLite with the 3 tables (`users`, `listings`, `intents`), signup/login/logout with werkzeug password hashing and session cookies, full listings CRUD with screenshot upload and stack field, public browse with filters (price range, MRR range, stack, sort), \"I'm Interested\" contact intent that emails the seller via SMTP (falls back to console print), Stripe OAuth flow at `/connect/stripe` that verifies MRR and adds a \"Revenue Verified\" badge, and a dashboard showing listings + received interest with buyer contact info. Templates use Tailwind CDN + htmx CDN with a dark minimal design. A standalone `landing.html` is ready for static deploy. Old unused templates (offers, messages, chat) were removed.",
   "validation": {
     "ok": true,
     "missing_files": [],
@@ -251,18 +237,15 @@
       "landing.html",
       "templates\\base.html",
       "templates\\index.html",
-      "templates\\register.html",
       "templates\\login.html",
       "templates\\listings.html",
-      "templates\\listing_new.html",
       "templates\\listing_detail.html",
-      "templates\\listing_edit.html",
       "templates\\dashboard.html",
-      "templates\\offer_messages.html",
-      "templates\\_messages.html"
+      "templates\\signup.html",
+      "templates\\listing_form.html"
     ],
     "compile_errors": [],
-    "total_size_bytes": 89119,
-    "file_count": 17
+    "total_size_bytes": 6797710,
+    "file_count": 86
   }
 }

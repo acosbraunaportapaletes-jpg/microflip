@@ -1,0 +1,64 @@
+{
+  "slug": "microflip",
+  "started_at": "2026-04-23T23:00:30.097852+00:00",
+  "finished_at": "2026-04-23T23:09:59.738176+00:00",
+  "target_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip",
+  "build": {
+    "ok": true,
+    "files": 17
+  },
+  "content_pack": {
+    "files": {
+      "thread_x": "content\\thread_x.txt",
+      "linkedin": "content\\linkedin.txt",
+      "reddit": "content\\reddit.txt",
+      "tweet_single": "content\\tweet_single.txt",
+      "yt_short": "content\\yt_short.txt",
+      "image_prompt": "content\\image_prompt.txt"
+    },
+    "content_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\content"
+  },
+  "deployment": {
+    "steps": [
+      {
+        "stage": "git_commit",
+        "ok": true,
+        "stdout": "[main (root-commit) 881ba2e] initial build: microflip\n 24 files changed, 1585 insertions(+)\n create mode 100644 .env.example\n create mode 100644 .gitignore\n create mode 100644 README.md\n create mode 100644 app.py\n create mode 100644 content/image_prompt.txt\n create mode 100644 content/linkedin.txt\n create mode 100644 content/reddit.txt\n create mode 100644 content/thread_x.txt\n create mode 100644 content/tweet_single.txt\n create mode 100644 content/yt_short.txt\n create mode 100644 landing.html\n create mode 100644 meta.json\n create mode 100644 requirements.txt\n create mode 100644 templates/_messages.html\n create mode 100644 templates/base.html\n create mode 100644 templates/dashboard.html\n create mode 100644 templates/index.html\n create mode 100644 templates/listing_detail.html\n create mode 100644 templates/listing_edit.html\n create mode 100644 templates/listing_new.html\n create mode 100644 templates/listings.html\n create mode 100644 templates/login.html\n create mode 100644 templates/offer_messages.html\n create mode 100644 templates/register.html",
+        "stderr": ""
+      },
+      {
+        "stage": "github_push",
+        "ok": true,
+        "repo_url": "https://github.com/acosbraunaportapaletes-jpg/microflip",
+        "clone_url": "https://github.com/acosbraunaportapaletes-jpg/microflip.git"
+      },
+      {
+        "stage": "vercel",
+        "ok": false,
+        "reason": "PROJECT_CREATE",
+        "detail": {
+          "error": {
+            "code": "bad_request",
+            "message": "Failed to link acosbraunaportapaletes-jpg/microflip. You need to add a Login Connection to your GitHub account first.",
+            "action": "Add a Login Connection",
+            "link": "https://vercel.com/docs/accounts/create-an-account#login-methods-and-connections",
+            "repo": "acosbraunaportapaletes-jpg/microflip"
+          }
+        }
+      }
+    ],
+    "repo_url": "https://github.com/acosbraunaportapaletes-jpg/microflip",
+    "expected_url": null,
+    "ok": true
+  },
+  "outreach": {
+    "ok": true,
+    "n_candidates": 1,
+    "n_messages": 1,
+    "outreach_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\outreach"
+  },
+  "auto_listings": {},
+  "verdict": "CAUTION",
+  "pitch": "Compre e venda micro-SaaS de $500 a $50k com métricas verificadas.",
+  "name": "MicroFlip"
+}

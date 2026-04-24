@@ -5,82 +5,56 @@
 
 <section class="mb-10">
     <div class="flex items-center justify-between mb-4">
-        <h2 class="text-lg font-semibold text-white">Meus Listings</h2>
-        <a href="/listings/new" class="text-emerald-400 hover:text-emerald-300 text-sm">+ Novo Listing</a>
+        <h2 class="text-lg font-semibold text-white">My Listings</h2>
+        <a href="/listings/new" class="text-emerald-400 hover:text-emerald-300 text-sm">+ New Listing</a>
     </div>
-    {% if my_listings %}
+    {% if listings %}
     <div class="space-y-3">
-        {% for l in my_listings %}
+        {% for l in listings %}
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 flex items-center justify-between">
             <div>
                 <a href="/listings/{{ l.id }}" class="text-white font-semibold hover:text-emerald-400">{{ l.title }}</a>
                 <span class="status-badge status-{{ l.status }} ml-2">{{ l.status }}</span>
                 <span class="text-neutral-500 text-sm ml-2">{{ l.asking_price_usd|usd }}</span>
-                {% if l.mrr_verified %}<span class="badge-verified ml-2">MRR Verificado</span>{% endif %}
+                {% if l.stripe_verified %}<span class="badge-verified ml-2">Revenue Verified</span>{% endif %}
             </div>
-            <a href="/listings/{{ l.id }}/edit" class="text-neutral-400 hover:text-white text-sm">Editar</a>
+            <div class="flex gap-3 items-center">
+                {% if not l.stripe_verified %}
+                <a href="/connect/stripe?listing_id={{ l.id }}" class="text-blue-400 hover:text-blue-300 text-xs">Verify MRR</a>
+                {% endif %}
+                <a href="/listings/{{ l.id }}/edit" class="text-neutral-400 hover:text-white text-sm">Edit</a>
+            </div>
         </div>
         {% endfor %}
     </div>
     {% else %}
-    <p class="text-neutral-500 text-sm">Nenhum listing ainda. <a href="/listings/new" class="text-emerald-400 hover:underline">Crie um</a>.</p>
-    {% endif %}
-</section>
-
-<section class="mb-10">
-    <h2 class="text-lg font-semibold text-white mb-4">Ofertas Recebidas</h2>
-    {% if received_offers %}
-    <div class="space-y-3">
-        {% for o in received_offers %}
-        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
-            <div class="flex items-center justify-between">
-                <div>
-                    <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
-                    <span class="text-neutral-500 text-sm ml-2">para "{{ o.listing_title }}"</span>
-                    <span class="text-neutral-500 text-sm ml-2">de {{ o.buyer_name }}</span>
-                    <span class="status-badge status-{{ o.status }} ml-2">{{ o.status }}</span>
-                </div>
-                <div class="flex gap-2 items-center">
-                    <a href="/offers/{{ o.id }}/messages" class="text-emerald-400 text-xs hover:underline">Chat</a>
-                    {% if o.status == 'pending' %}
-                    <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
-                        <input type="hidden" name="action" value="accepted">
-                        <button class="bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-1 rounded text-xs">Aceitar</button>
-                    </form>
-                    <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
-                        <input type="hidden" name="action" value="rejected">
-                        <button class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-xs">Rejeitar</button>
-                    </form>
-                    {% endif %}
-                </div>
-            </div>
-            {% if o.message %}<p class="text-neutral-400 text-sm mt-2">{{ o.message }}</p>{% endif %}
-        </div>
-        {% endfor %}
-    </div>
-    {% else %}
-    <p class="text-neutral-500 text-sm">Nenhuma oferta recebida.</p>
+    <p class="text-neutral-500 text-sm">No listings yet. <a href="/listings/new" class="text-emerald-400 hover:underline">Create one</a>.</p>
     {% endif %}
 </section>
 
 <section>
-    <h2 class="text-lg font-semibold text-white mb-4">Minhas Ofertas Enviadas</h2>
-    {% if sent_offers %}
+    <h2 class="text-lg font-semibold text-white mb-4">Interest Received</h2>
+    {% if intents %}
     <div class="space-y-3">
-        {% for o in sent_offers %}
-        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 flex items-center justify-between">
-            <div>
-                <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
-                <span class="text-neutral-500 text-sm ml-2">em "{{ o.listing_title }}"</span>
-                <span class="text-neutral-500 text-sm ml-2">({{ o.seller_name }})</span>
-                <span class="status-badge status-{{ o.status }} ml-2">{{ o.status }}</span>
+        {% for i in intents %}
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-white font-semibold">{{ i.buyer_name }}</span>
+                    <span class="text-neutral-500 text-sm ml-2">interested in</span>
+                    <span class="text-emerald-400 text-sm ml-1">{{ i.listing_title }}</span>
+                </div>
+                <div class="text-neutral-500 text-xs">{{ i.created_at|timeago }}</div>
             </div>
-            <a href="/offers/{{ o.id }}/messages" class="text-emerald-400 text-xs hover:underline">Chat</a>
+            {% if i.message %}
+            <p class="text-neutral-400 text-sm mt-2">"{{ i.message }}"</p>
+            {% endif %}
+            <p class="text-neutral-500 text-xs mt-2">Contact: <a href="mailto:{{ i.buyer_email }}" class="text-emerald-400 hover:underline">{{ i.buyer_email }}</a></p>
         </div>
         {% endfor %}
     </div>
     {% else %}
-    <p class="text-neutral-500 text-sm">Nenhuma oferta enviada.</p>
+    <p class="text-neutral-500 text-sm">No interest received yet.</p>
     {% endif %}
 </section>
 {% endblock %}

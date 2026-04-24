@@ -1,0 +1,15 @@
+A maioria dos micro-SaaS lucrativos morre em silêncio porque o founder simplesmente cansou.
+
+Você construiu um SaaS que fatura $2k/mês. Funciona. Tem clientes pagando. Mas você já está com a cabeça no próximo projeto. E aí começa o abandono lento: para de responder ticket, não lança feature nova, o churn sobe. Em 6 meses, aquilo que poderia valer $30k virou um repositório esquecido no GitHub.
+
+Do outro lado, tem um founder que mataria pra comprar um projeto com $2k/mês de MRR verificado em vez de começar do zero. Mas onde essas duas pessoas se encontram? Flippa virou uma feira de vaidades com métricas infladas. Acquire.com nem olha pra deal abaixo de $100k. Empire Flippers quer múltiplos de 7 dígitos. O mercado de micro-SaaS entre $500 e $50k simplesmente não tinha casa.
+
+É exatamente esse gap que o MicroFlip resolve. A proposta é cirúrgica: um marketplace só pra micro-SaaS com receita verificada nessa faixa. Sem leilão maluco, sem vanity metrics, sem processo de due diligence que leva 4 meses. Você lista, o comprador vê o MRR real, negocia direto e fecha. O founder que quer sair faz um exit digno. O founder que quer entrar compra algo que já roda em vez de apostar 6 meses construindo do zero sem saber se alguém vai pagar.
+
+Isso muda a dinâmica inteira do ecossistema indie. Projetos paralelos deixam de ser descartáveis. Aquele SaaS que você fez num fim de semana e que paga seu almoço todo mês agora é um ativo negociável. E pra quem compra, é a forma mais barata de pular a fase mais arriscada de qualquer negócio digital: o zero ao um.
+
+O modelo é simples, mas o impacto é grande. Cada micro-SaaS que troca de mãos em vez de morrer abandonado é um produto que continua servindo seus usuários, gerando receita e criando valor. É economia circular aplicada a software.
+
+Se você tem um projeto lucrativo juntando poeira ou está procurando um atalho real pra ter MRR desde o dia um, vale conhecer.
+
+Você tem algum projeto parado que ainda fatura mas que você já desistiu emocionalmente de manter?

@@ -3,25 +3,25 @@ Here's the thread:
 ---
 
 **1/8**
-Você construiu um micro-SaaS com $2k de MRR. Quer vender. E aí descobre: Flippa virou terra de ninguém, Acquire nem olha pra deal abaixo de $100k, Empire Flippers exige escala que você não tem. E agora?
+Eu vendi um micro-SaaS de $3k MRR por $28k. Demorei 4 meses tentando no Flippa até achar um lugar que realmente funciona pra deals pequenos.
 
 **2/8**
-Existe um limbo no mercado de aquisições. Produtos entre $500 e $50k são pequenos demais pros marketplaces tradicionais — mas lucrativos demais pra morrer no abandono.
+O problema: se seu projeto fatura menos de $50k, você não existe. Acquire te ignora. Empire Flippers exige escala. Flippa virou terra de ninguém.
 
 **3/8**
-Milhares de indie hackers constroem micro-SaaS rentáveis e ficam presos neles. Sem energia pra escalar, sem canal pra vender. O projeto vira um peso, não um ativo.
+MicroFlip foi feito pra isso — compra e venda de micro-SaaS de $500 a $50k. Receita verificada, sem achismo.
 
 **4/8**
-MicroFlip é um marketplace feito exclusivamente pra essa faixa: micro-SaaS de $500 a $50k. Métricas verificadas, sem lixo, sem projetos fantasma.
+Pra quem vende: você lista seu projeto com métricas reais. Nada de "potencial de crescimento" — números verificados, compradores sérios.
 
 **5/8**
-A diferença é simples: cada listagem passa por verificação de MRR, churn e receita antes de ir ao ar. Comprador vê números reais, não capturas de tela editáveis.
+Pra quem compra: em vez de construir do zero e torcer pra dar certo, você adquire um projeto que já fatura. Com dados auditados.
 
 **6/8**
-Pra quem vende: um canal onde seu micro-SaaS de $3k não compete com empresas de $500k por atenção. Pra quem compra: deal flow curado na faixa que realmente cabe no bolso de um solo founder.
+O mercado de micro-aquisições tá explodindo. Solo founders querem exits rápidos. Compradores querem pular a fase de validação. MicroFlip conecta os dois lados.
 
 **7/8**
-O melhor exit nem sempre é o maior. Às vezes é vender um projeto de $1.5k/mês por $18k e usar esse capital pra construir o próximo 🚀
+Sem taxas absurdas, sem burocracia de M&A enterprise. É um marketplace pensado pra indie hackers que querem resolver em semanas, não meses 🛠️
 
 **8/8**
-Se você tem um micro-SaaS lucrativo parado ou quer adquirir um sem gastar seis dígitos, vale conhecer → https://microflip.vercel.app
+Se você tem um micro-SaaS parado ou quer comprar um projeto já rodando, vale conhecer. Acessa aqui → https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140 🚀

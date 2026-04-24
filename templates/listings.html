@@ -3,29 +3,34 @@
 {% block content %}
 <h1 class="text-2xl font-bold text-white mb-6">Browse Listings</h1>
 
-<form method="get" class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 mb-6 grid grid-cols-2 md:grid-cols-5 gap-3 items-end">
+<form method="get" class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 mb-6 grid grid-cols-2 md:grid-cols-6 gap-3 items-end">
     <div>
-        <label class="block text-xs text-neutral-500 mb-1">Busca</label>
-        <input type="text" name="q" value="{{ request.args.get('q', '') }}" placeholder="Nome..." class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <label class="block text-xs text-neutral-500 mb-1">Min Price</label>
+        <input type="number" name="min_price" value="{{ request.args.get('min_price', '') }}" placeholder="$500" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
-        <label class="block text-xs text-neutral-500 mb-1">Preço min</label>
-        <input type="number" name="price_min" value="{{ request.args.get('price_min', '') }}" placeholder="$500" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <label class="block text-xs text-neutral-500 mb-1">Max Price</label>
+        <input type="number" name="max_price" value="{{ request.args.get('max_price', '') }}" placeholder="$50,000" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
-        <label class="block text-xs text-neutral-500 mb-1">Preço max</label>
-        <input type="number" name="price_max" value="{{ request.args.get('price_max', '') }}" placeholder="$50000" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <label class="block text-xs text-neutral-500 mb-1">Min MRR</label>
+        <input type="number" name="min_mrr" value="{{ request.args.get('min_mrr', '') }}" placeholder="$0" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
-        <label class="block text-xs text-neutral-500 mb-1">Ordenar</label>
+        <label class="block text-xs text-neutral-500 mb-1">Stack</label>
+        <input type="text" name="stack" value="{{ request.args.get('stack', '') }}" placeholder="e.g. React" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+    </div>
+    <div>
+        <label class="block text-xs text-neutral-500 mb-1">Sort</label>
         <select name="sort" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
-            <option value="recent" {% if request.args.get('sort')=='recent' %}selected{% endif %}>Mais recente</option>
-            <option value="price_asc" {% if request.args.get('sort')=='price_asc' %}selected{% endif %}>Menor preço</option>
-            <option value="price_desc" {% if request.args.get('sort')=='price_desc' %}selected{% endif %}>Maior preço</option>
+            <option value="newest" {% if request.args.get('sort','newest')=='newest' %}selected{% endif %}>Newest</option>
+            <option value="price_asc" {% if request.args.get('sort')=='price_asc' %}selected{% endif %}>Price: Low</option>
+            <option value="price_desc" {% if request.args.get('sort')=='price_desc' %}selected{% endif %}>Price: High</option>
+            <option value="mrr_desc" {% if request.args.get('sort')=='mrr_desc' %}selected{% endif %}>MRR: High</option>
         </select>
     </div>
     <div>
-        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-1.5 rounded text-sm font-semibold">Filtrar</button>
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-1.5 rounded text-sm font-semibold">Filter</button>
     </div>
 </form>
 
@@ -36,21 +41,24 @@
         {% if l.screenshot_url %}
         <img src="{{ l.screenshot_url }}" alt="" class="w-full h-32 object-cover rounded mb-3 bg-neutral-800">
         {% else %}
-        <div class="w-full h-32 bg-neutral-800 rounded mb-3 flex items-center justify-center text-neutral-600 text-sm">Sem screenshot</div>
+        <div class="w-full h-32 bg-neutral-800 rounded mb-3 flex items-center justify-center text-neutral-600 text-sm">No screenshot</div>
         {% endif %}
         <h3 class="font-semibold text-white">{{ l.title }}</h3>
         <p class="text-neutral-400 text-sm mt-1 line-clamp-2">{{ l.description[:120] }}</p>
         <div class="flex items-center justify-between mt-3 text-sm">
             <span class="text-emerald-400 font-semibold">{{ l.asking_price_usd|usd }}</span>
             <span class="text-neutral-500">MRR {{ l.mrr_usd|usd }}
-                {% if l.mrr_verified %}<span class="badge-verified ml-1">Verificado</span>{% endif %}
+                {% if l.stripe_verified %}<span class="badge-verified ml-1">Revenue Verified</span>{% endif %}
             </span>
         </div>
-        <p class="text-neutral-600 text-xs mt-2">por {{ l.seller_name }}</p>
+        {% if l.stack %}
+        <p class="text-neutral-600 text-xs mt-2">{{ l.stack }}</p>
+        {% endif %}
+        <p class="text-neutral-600 text-xs mt-1">by {{ l.seller_name }}</p>
     </a>
     {% endfor %}
 </div>
 {% else %}
-<p class="text-neutral-500 text-center py-12">Nenhum listing encontrado com esses filtros.</p>
+<p class="text-neutral-500 text-center py-12">No listings found matching your filters.</p>
 {% endif %}
 {% endblock %}
