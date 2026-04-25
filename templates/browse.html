@@ -3,22 +3,29 @@
 {% block content %}
 <h1 class="text-2xl font-bold text-white mb-6">Browse Listings</h1>
 
-<form method="get" class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 mb-6 grid grid-cols-2 md:grid-cols-6 gap-3 items-end">
+<form method="get" class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 mb-6 grid grid-cols-2 md:grid-cols-7 gap-3 items-end">
     <div>
         <label class="block text-xs text-neutral-500 mb-1">Min Price</label>
-        <input type="number" name="min_price" value="{{ request.args.get('min_price', '') }}" placeholder="$500" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <input type="number" name="price_min" value="{{ request.args.get('price_min', '') }}" placeholder="$500" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
         <label class="block text-xs text-neutral-500 mb-1">Max Price</label>
-        <input type="number" name="max_price" value="{{ request.args.get('max_price', '') }}" placeholder="$50,000" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <input type="number" name="price_max" value="{{ request.args.get('price_max', '') }}" placeholder="$50,000" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
         <label class="block text-xs text-neutral-500 mb-1">Min MRR</label>
-        <input type="number" name="min_mrr" value="{{ request.args.get('min_mrr', '') }}" placeholder="$0" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+        <input type="number" name="mrr_min" value="{{ request.args.get('mrr_min', '') }}" placeholder="$0" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
     </div>
     <div>
         <label class="block text-xs text-neutral-500 mb-1">Stack</label>
         <input type="text" name="stack" value="{{ request.args.get('stack', '') }}" placeholder="e.g. React" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+    </div>
+    <div>
+        <label class="block text-xs text-neutral-500 mb-1">Verified only</label>
+        <select name="verified" class="w-full bg-neutral-800 border border-neutral-700 rounded px-2 py-1.5 text-sm text-white focus:outline-none">
+            <option value="">All</option>
+            <option value="1" {% if request.args.get('verified') %}selected{% endif %}>Verified only</option>
+        </select>
     </div>
     <div>
         <label class="block text-xs text-neutral-500 mb-1">Sort</label>
@@ -47,14 +54,13 @@
         <p class="text-neutral-400 text-sm mt-1 line-clamp-2">{{ l.description[:120] }}</p>
         <div class="flex items-center justify-between mt-3 text-sm">
             <span class="text-emerald-400 font-semibold">{{ l.asking_price_usd|usd }}</span>
-            <span class="text-neutral-500">MRR {{ l.mrr_usd|usd }}
-                {% if l.stripe_verified %}<span class="badge-verified ml-1">Revenue Verified</span>{% endif %}
+            <span class="text-neutral-500">MRR {{ l.mrr_declared_usd|usd }}
+                {% if l.verified %}<span class="badge-verified ml-1">Verified</span>{% endif %}
             </span>
         </div>
-        {% if l.stack %}
-        <p class="text-neutral-600 text-xs mt-2">{{ l.stack }}</p>
+        {% if l.stack_tags %}
+        <p class="text-neutral-600 text-xs mt-2">{{ l.stack_tags }}</p>
         {% endif %}
-        <p class="text-neutral-600 text-xs mt-1">by {{ l.seller_name }}</p>
     </a>
     {% endfor %}
 </div>

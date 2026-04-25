@@ -6,13 +6,13 @@
     <p class="text-neutral-400 text-lg mb-8 max-w-xl mx-auto">Verified revenue via Stripe. No guesswork, no fluff.</p>
     <div class="flex gap-4 justify-center">
         <a href="/listings" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold">Browse Listings</a>
-        <a href="/signup" class="border border-neutral-600 hover:border-neutral-400 text-white px-6 py-3 rounded-lg">Sell Your SaaS</a>
+        <a href="/register" class="border border-neutral-600 hover:border-neutral-400 text-white px-6 py-3 rounded-lg">Sell Your SaaS</a>
     </div>
 </div>
 
 {% if listings %}
 <div class="mt-8">
-    <h2 class="text-xl font-semibold text-white mb-6">Verified Listings</h2>
+    <h2 class="text-xl font-semibold text-white mb-6">Recent Listings</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {% for l in listings %}
         <a href="/listings/{{ l.id }}" class="block bg-neutral-900 border border-neutral-800 rounded-lg p-5 hover:border-neutral-600 transition">
@@ -25,12 +25,12 @@
             <p class="text-neutral-400 text-sm mt-1 line-clamp-2">{{ l.description[:120] }}</p>
             <div class="flex items-center justify-between mt-3 text-sm">
                 <span class="text-emerald-400 font-semibold">{{ l.asking_price_usd|usd }}</span>
-                <span class="text-neutral-500">MRR {{ l.mrr_usd|usd }}
-                    {% if l.stripe_verified %}<span class="badge-verified ml-1">Revenue Verified</span>{% endif %}
+                <span class="text-neutral-500">MRR {{ l.mrr_declared_usd|usd }}
+                    {% if l.verified %}<span class="badge-verified ml-1">Verified</span>{% endif %}
                 </span>
             </div>
-            {% if l.stack %}
-            <p class="text-neutral-600 text-xs mt-2">{{ l.stack }}</p>
+            {% if l.stack_tags %}
+            <p class="text-neutral-600 text-xs mt-2">{{ l.stack_tags }}</p>
             {% endif %}
         </a>
         {% endfor %}
@@ -38,7 +38,7 @@
 </div>
 {% else %}
 <div class="text-center py-12">
-    <p class="text-neutral-500">No verified listings yet. <a href="/listings/new" class="text-emerald-400 hover:underline">Be the first to list</a>.</p>
+    <p class="text-neutral-500">No listings yet. <a href="/listings/new" class="text-emerald-400 hover:underline">Be the first to list</a>.</p>
 </div>
 {% endif %}
 {% endblock %}

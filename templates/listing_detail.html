@@ -9,28 +9,47 @@
         <div class="flex items-center gap-3 mb-2">
             <h1 class="text-2xl font-bold text-white">{{ listing.title }}</h1>
             <span class="status-badge status-{{ listing.status }}">{{ listing.status }}</span>
-            {% if listing.stripe_verified %}
+            {% if listing.verified %}
             <span class="badge-verified">Revenue Verified</span>
             {% endif %}
         </div>
-        <p class="text-neutral-500 text-sm mb-4">by {{ listing.seller_name }} &middot; {{ listing.created_at|timeago }}</p>
+        <p class="text-neutral-500 text-sm mb-4">by {{ listing.seller_email }} &middot; {{ listing.created_at|timeago }}</p>
         {% if listing.url %}
         <p class="text-sm mb-4"><a href="{{ listing.url }}" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">{{ listing.url }}</a></p>
         {% endif %}
-        {% if listing.stack %}
+        {% if listing.stack_tags %}
         <div class="flex gap-2 flex-wrap mb-4">
-            {% for tech in listing.stack.split(',') %}
+            {% for tech in listing.stack_tags.split(',') %}
             <span class="bg-neutral-800 text-neutral-300 text-xs px-2 py-1 rounded">{{ tech.strip() }}</span>
             {% endfor %}
         </div>
         {% endif %}
         <div class="text-neutral-300 leading-relaxed whitespace-pre-line">{{ listing.description }}</div>
 
-        {% if current_user and current_user.id == listing.user_id %}
+        {% if snapshots %}
+        <div class="mt-8">
+            <h2 class="text-lg font-semibold text-white mb-3">Verified Revenue (MRR)</h2>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+                <div class="flex items-end gap-1 h-40">
+                    {% set max_mrr = snapshots|map(attribute='mrr')|max %}
+                    {% for s in snapshots %}
+                    <div class="flex-1 flex flex-col items-center justify-end h-full">
+                        <div class="bg-emerald-500 rounded-t w-full" style="height: {{ (s.mrr / max_mrr * 100) if max_mrr > 0 else 0 }}%"></div>
+                        <span class="text-neutral-500 text-xs mt-1">${{ s.mrr }}</span>
+                        <span class="text-neutral-600 text-xs">{{ s.month[5:7] }}/{{ s.month[2:4] }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if current_user and current_user.id == listing.seller_id %}
         <div class="mt-8 flex gap-3">
-            <a href="/listings/{{ listing.id }}/edit" class="bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded text-sm">Edit Listing</a>
-            {% if not listing.stripe_verified %}
-            <a href="/connect/stripe?listing_id={{ listing.id }}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Verify Revenue via Stripe</a>
+            {% if not listing.verified %}
+            <form action="/listings/{{ listing.id }}/verify" method="post">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Verify Revenue via Stripe</button>
+            </form>
             {% endif %}
         </div>
         {% endif %}
@@ -41,42 +60,73 @@
             <div class="text-3xl font-bold text-emerald-400 mb-1">{{ listing.asking_price_usd|usd }}</div>
             <div class="text-neutral-500 text-sm mb-4">asking price</div>
             <div class="flex items-center gap-2 mb-2">
-                <span class="text-white font-semibold">MRR: {{ listing.mrr_usd|usd }}</span>
-                {% if listing.stripe_verified %}
+                <span class="text-white font-semibold">MRR: {{ listing.mrr_declared_usd|usd }}</span>
+                {% if listing.verified %}
                 <span class="badge-verified">Verified</span>
                 {% else %}
                 <span class="text-neutral-500 text-xs">(self-reported)</span>
                 {% endif %}
             </div>
-            {% if listing.mrr_usd and listing.mrr_usd > 0 %}
+            {% if listing.mrr_verified_usd is not none and listing.verified %}
+            <div class="text-emerald-400 text-sm mb-2">Verified MRR: {{ listing.mrr_verified_usd|usd }}/mo</div>
+            {% endif %}
+            {% if listing.mrr_declared_usd and listing.mrr_declared_usd > 0 %}
             <div class="text-neutral-500 text-sm mb-6">
-                Multiple: {{ "%.1f"|format(listing.asking_price_usd / listing.mrr_usd) }}x MRR
+                Multiple: {{ "%.1f"|format(listing.asking_price_usd / listing.mrr_declared_usd) }}x MRR
             </div>
             {% endif %}
 
-            {% if listing.seller_bio %}
-            <div class="border-t border-neutral-800 pt-4 mb-4">
-                <p class="text-xs text-neutral-500 mb-1">About the seller</p>
-                <p class="text-sm text-neutral-300">{{ listing.seller_bio }}</p>
-            </div>
-            {% endif %}
-
-            {% if current_user and current_user.id != listing.user_id and listing.status == 'active' %}
-                {% if already_interested %}
-                <div class="text-center text-emerald-400 text-sm py-3 bg-emerald-900/20 border border-emerald-800 rounded">
-                    You already expressed interest. The seller has your contact info.
+            {% if current_user and current_user.id != listing.seller_id and listing.status == 'active' %}
+            <form action="/listings/{{ listing.id }}/offer" method="post" class="space-y-3 border-t border-neutral-800 pt-4">
+                <h3 class="text-white font-semibold text-sm">Make an Offer</h3>
+                <div>
+                    <label class="block text-xs text-neutral-500 mb-1">Your offer (USD)</label>
+                    <input type="number" name="amount" required min="1" placeholder="e.g. 5000" class="w-full bg-neutral-800 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none">
                 </div>
-                {% else %}
-                <form action="/listings/{{ listing.id }}/interest" method="post" class="space-y-3">
-                    <div>
-                        <label class="block text-xs text-neutral-500 mb-1">Message (optional)</label>
-                        <textarea name="message" rows="3" placeholder="Tell the seller why you're interested..." class="w-full bg-neutral-800 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm">I'm Interested</button>
-                </form>
-                {% endif %}
+                <div>
+                    <label class="block text-xs text-neutral-500 mb-1">Message (optional)</label>
+                    <textarea name="message" rows="3" placeholder="Tell the seller why you're interested..." class="w-full bg-neutral-800 border border-neutral-700 rounded px-3 py-2 text-white text-sm focus:border-emerald-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm">Send Offer</button>
+            </form>
             {% elif not current_user and listing.status == 'active' %}
-            <a href="/login" class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm">Log in to express interest</a>
+            <a href="/login" class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-2 rounded font-semibold text-sm mt-4">Log in to make an offer</a>
+            {% endif %}
+
+            {% if offers %}
+            <div class="border-t border-neutral-800 pt-4 mt-4">
+                <h3 class="text-white font-semibold text-sm mb-3">Offers</h3>
+                <div class="space-y-2">
+                    {% for o in offers %}
+                    <div class="bg-neutral-800 rounded p-3 text-sm">
+                        <div class="flex justify-between items-center">
+                            <span class="text-white font-semibold">{{ o.amount_usd|usd }}</span>
+                            <span class="offer-{{ o.status }} text-xs font-semibold uppercase">{{ o.status }}</span>
+                        </div>
+                        {% if o.message %}
+                        <p class="text-neutral-400 text-xs mt-1">"{{ o.message }}"</p>
+                        {% endif %}
+                        {% if o.get('buyer_email') %}
+                        <p class="text-neutral-500 text-xs mt-1">from {{ o.buyer_email }}</p>
+                        {% endif %}
+                        <p class="text-neutral-600 text-xs mt-1">{{ o.created_at|timeago }}</p>
+
+                        {% if current_user and current_user.id == listing.seller_id and o.status == 'pending' %}
+                        <div class="flex gap-2 mt-2">
+                            <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                                <input type="hidden" name="action" value="accept">
+                                <button class="bg-emerald-700 hover:bg-emerald-600 text-white px-2 py-1 rounded text-xs">Accept</button>
+                            </form>
+                            <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                                <input type="hidden" name="action" value="reject">
+                                <button class="bg-red-800 hover:bg-red-700 text-white px-2 py-1 rounded text-xs">Reject</button>
+                            </form>
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
             {% endif %}
         </div>
     </div>

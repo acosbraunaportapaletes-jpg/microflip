@@ -1,25 +1,27 @@
-# Product Hunt Launch Post — MicroFlip
+# MicroFlip — Product Hunt Launch Post
 
 ---
 
-## Tagline (55 chars)
+## Tagline (54 chars)
 
-**Buy & sell micro-SaaS projects with verified revenue.**
+**Buy and sell micro-SaaS with verified revenue. Fast.**
 
 ---
 
 ## Description (258 chars)
 
-**The marketplace built for micro-SaaS deals from $500 to $50K. Every listing comes with verified revenue, so buyers get confidence and sellers get fair offers. No bloated fees, no enterprise gatekeeping — just a clean way for indie founders to make deals.**
+**The marketplace built for micro-SaaS deals from $500 to $50K. Every listing comes with verified revenue, so buyers get transparency and sellers get real offers — no brokers, no high fees, no gatekeeping. Built by indie hackers, for indie hackers.**
 
 ---
 
 ## Maker Comment
 
-Hey Product Hunt! I'm the founder of MicroFlip, and I built this out of pure frustration. Last year I tried to sell a small SaaS I'd been running — $1,800 MRR, profitable, clean codebase. I listed it on Flippa and got buried under domain flippers and crypto spam. Acquire.com? Crickets — too small for their pipeline. Empire Flippers told me to come back when I hit $100K ARR. There was literally nowhere to sell a legit micro-SaaS without feeling like I was on Craigslist.
+**Hey Product Hunt! 👋**
 
-So I built the marketplace I wished existed. MicroFlip is designed specifically for the $500–$50K range — the deals that every other platform ignores. We verify revenue before anything goes live, so buyers aren't guessing and sellers aren't wasting time with tire-kickers. No listing fees. Escrow-protected transactions. The whole process takes days, not months.
+I'm [Name], founder of MicroFlip. I built and sold three micro-SaaS products over the past few years, and every single time the selling experience was painful. Flippa felt like a flea market — full of inflated screenshots and fake metrics. Acquire.com ignored my listings because the numbers were "too small." Empire Flippers told me to come back when I hit $100K ARR. I kept thinking: there has to be a better way for solo builders to exit a $2K/mo project without jumping through hoops designed for venture-backed startups.
 
-This is for the indie hacker who built something real — maybe it's doing $500/mo, maybe $4K/mo — and wants a clean exit without jumping through enterprise hoops. And it's for the builder who'd rather buy a project with paying customers than start from zero again. We're making micro-acquisitions as straightforward as they should be.
+So I built MicroFlip — a marketplace exclusively for micro-SaaS deals between $500 and $50K. The core idea is simple: every listing has **verified revenue** (we connect directly to Stripe, Paddle, or bank statements), so buyers can trust the numbers and sellers don't waste time with tire-kickers. No brokers taking 15% cuts. No months-long due diligence for a $5K deal. List today, get offers this week.
 
-I'd love your honest feedback — what would make you trust a platform like this enough to list or buy? Drop your thoughts, roast the landing page, ask me anything. We're early and building in public, so your input genuinely shapes what comes next. Thanks for checking us out! 🚀
+We're focused on the deals nobody else cares about — the side project doing $800/mo that a solo dev wants to offload, the weekend SaaS making $3K/mo that deserves a new owner with more time. These products have real users and real revenue, they just need a home that takes them seriously. We handle escrow, revenue verification, and a simple transfer checklist so both sides close with confidence.
+
+I'd love your feedback — what would make you trust a marketplace like this as a buyer or seller? Drop a comment, I read every single one. And if you've got a micro-SaaS collecting dust, come list it. 🚀

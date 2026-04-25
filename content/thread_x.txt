@@ -3,25 +3,25 @@ Here's the thread:
 ---
 
 **1/8**
-Eu vendi um micro-SaaS de $3k MRR por $28k. Demorei 4 meses tentando no Flippa até achar um lugar que realmente funciona pra deals pequenos.
+Você construiu um micro-SaaS que fatura $2k/mês. Quer vender. E aí descobre: Flippa virou terra de ninguém, Acquire nem olha pra deal abaixo de $100k, Empire Flippers exige escala que você não tem. Onde você vende?
 
 **2/8**
-O problema: se seu projeto fatura menos de $50k, você não existe. Acquire te ignora. Empire Flippers exige escala. Flippa virou terra de ninguém.
+O mercado de micro-SaaS entre $500 e $50k é um limbo. Pequeno demais pros marketplaces grandes, valioso demais pra morrer no DM do Twitter. Milhares de projetos lucrativos trancados nas mãos de builders que já querem partir pro próximo.
 
 **3/8**
-MicroFlip foi feito pra isso — compra e venda de micro-SaaS de $500 a $50k. Receita verificada, sem achismo.
+MicroFlip é o marketplace feito exclusivamente pra esse range. Compra e venda de micro-SaaS com receita verificada. Sem intermediário cobrando 15%. Sem burocracia de due diligence de 3 meses.
 
 **4/8**
-Pra quem vende: você lista seu projeto com métricas reais. Nada de "potencial de crescimento" — números verificados, compradores sérios.
+Pra quem vende: você lista seu projeto, mostra a receita real e conecta direto com compradores qualificados. Exit rápido, sem enrolação.
 
 **5/8**
-Pra quem compra: em vez de construir do zero e torcer pra dar certo, você adquire um projeto que já fatura. Com dados auditados.
+Pra quem compra: chega de apostar no escuro. Toda listagem tem receita verificada. Você sabe exatamente o que está adquirindo antes de colocar um centavo.
 
 **6/8**
-O mercado de micro-aquisições tá explodindo. Solo founders querem exits rápidos. Compradores querem pular a fase de validação. MicroFlip conecta os dois lados.
+O indie hacker médio gasta 6-12 meses tentando vender um micro-SaaS pelos canais errados. Negocia no Twitter, posta em fórum, manda cold DM. Metade desiste e deixa o projeto morrer 💀
 
 **7/8**
-Sem taxas absurdas, sem burocracia de M&A enterprise. É um marketplace pensado pra indie hackers que querem resolver em semanas, não meses 🛠️
+Seu micro-SaaS lucrativo merece um exit digno. Não um post perdido num grupo de Telegram com 47 membros.
 
 **8/8**
-Se você tem um micro-SaaS parado ou quer comprar um projeto já rodando, vale conhecer. Acessa aqui → https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140 🚀
+Se você tem um micro-SaaS faturando e quer fazer exit rápido — ou quer comprar um projeto já validado — o MicroFlip foi feito pra você 🔗 https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-22e25c06-85a9-406b-9f7e-88dd1c43dc94

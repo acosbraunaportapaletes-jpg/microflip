@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}MicroFlip{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <style>
         body { background: #0a0a0a; color: #e5e5e5; }
-        .badge-verified { background: #16a34a; color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px; font-weight: 600; letter-spacing: 0.02em; }
-        .status-badge { font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px; text-transform: uppercase; font-weight: 600; }
+        .badge-verified {
+            background: #16a34a; color: white; font-size: 0.7rem;
+            padding: 2px 8px; border-radius: 9999px; font-weight: 600;
+        }
+        .status-badge {
+            font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px;
+            text-transform: uppercase; font-weight: 600;
+        }
         .status-draft { background: #525252; color: #d4d4d4; }
         .status-active { background: #166534; color: #86efac; }
         .status-sold { background: #991b1b; color: #fca5a5; }
+        .status-expired { background: #78350f; color: #fde68a; }
+        .offer-pending { color: #facc15; }
+        .offer-accepted { color: #4ade80; }
+        .offer-rejected { color: #f87171; }
+        .offer-countered { color: #60a5fa; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -22,14 +33,14 @@
             <a href="/listings" class="text-neutral-300 hover:text-white">Browse</a>
             {% if current_user %}
                 <a href="/dashboard" class="text-neutral-300 hover:text-white">Dashboard</a>
+                {% if current_user.role in ('seller', 'both') %}
                 <a href="/listings/new" class="text-emerald-400 hover:text-emerald-300">+ New Listing</a>
-                <span class="text-neutral-500">{{ current_user.name }}</span>
-                <form action="/logout" method="post" class="inline">
-                    <button class="text-neutral-400 hover:text-white text-sm">Logout</button>
-                </form>
+                {% endif %}
+                <span class="text-neutral-500">{{ current_user.email }}</span>
+                <a href="/logout" class="text-neutral-400 hover:text-white text-sm">Logout</a>
             {% else %}
                 <a href="/login" class="text-neutral-300 hover:text-white">Login</a>
-                <a href="/signup" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-sm">Sign Up</a>
+                <a href="/register" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded text-sm">Sign Up</a>
             {% endif %}
         </div>
     </nav>

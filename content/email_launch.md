@@ -2,50 +2,46 @@
 
 **Assunto:** Seu micro-SaaS vale mais do que você imagina
 
-**Preview:** O marketplace que faltava pra quem constrói pequeno — mas constrói de verdade.
+**Preview:** O marketplace que faltava pra quem fatura entre $500 e $50k/mês com SaaS.
 
 ---
 
-**Corpo do email:**
+**Corpo:**
 
 Fala,
 
-Vou ser direto: eu construí o MicroFlip porque passei pela mesma frustração que você.
+Vou ser direto: eu passei os últimos 2 anos comprando e vendendo micro-SaaS. E o processo sempre foi o mesmo — vergonhoso.
 
-Tinha um SaaS pequeno, faturando $1.200/mês, e queria vender. Fui pro Flippa — scam atrás de scam. Tentei o Acquire — ignorado, porque meu deal era "pequeno demais". Empire Flippers? Nem me respondeu. Parece que se você não fatura $100k/ano, você não existe. Só que existe muita gente construindo coisas reais na faixa de $500 a $50k. E essas pessoas mereciam um lugar próprio.
+Flippa virou feira de projeto morto. Acquire.com te ignora se você não fatura $10k/mês. Empire Flippers nem olha pra você abaixo de $100k. Sobra o quê? Grupo de Telegram, DM no Twitter e rezar pra não levar golpe.
 
-Então eu criei.
+Foi exatamente por isso que eu criei o **MicroFlip**.
 
-**MicroFlip é o marketplace exclusivo pra compra e venda de micro-SaaS de $500 a $50k — com receita verificada.**
-
-Sem inflação de métricas. Sem projetos fantasma. Sem aquele feeling de estar jogando dinheiro no escuro.
+MicroFlip é um marketplace feito exclusivamente pra micro-SaaS com receita entre $500 e $50k. Simples assim. Sem intermediário cobrando 15%. Sem processo de due diligence que demora 4 meses. Sem burocracia que só existe pra justificar taxa de broker.
 
 **O que o MicroFlip resolve:**
 
-- **Vender sem humilhação.** Seu projeto de $3k não vai ser ignorado. Aqui, ele é o público-alvo.
-- **Comprar com confiança.** Todo projeto listado passa por verificação de receita real. Você vê os números antes de arriscar um centavo.
-- **Fazer exit sem burocracia enterprise.** Sem due diligence de 90 dias, sem advogado cobrando $5k. Deal simples, transferência limpa.
+- **Receita verificada de verdade.** Todo projeto listado passa por verificação de MRR com acesso direto ao Stripe, Paddle ou gateway do seller. Não tem screenshot editado no Photoshop.
+- **Exit rápido sem intermediário caro.** Você lista, negocia direto com o comprador e fecha. Sem broker tirando 15% do seu deal de $8k.
+- **Deal flow pra quem compra.** Se você é indie hacker procurando um projeto com receita validada pra não começar do zero, aqui é onde você encontra.
 
-**Pra quem é:**
+**Quem deve comprar acesso ao MicroFlip:**
 
-Solo founders e indie hackers que construíram algo lucrativo e querem fazer um exit rápido — ou que preferem comprar um projeto já rodando em vez de começar do zero.
+Solo builders e indie hackers que têm um SaaS lucrativo, mas não têm tempo, energia ou vontade de escalar — e querem transformar isso em dinheiro no bolso. Ou compradores espertos que preferem pagar $3k num projeto com 20 clientes pagantes do que passar 6 meses validando ideia.
 
-**Pra quem NÃO é:**
+**Quem NÃO deve comprar:**
 
-Se você quer listar um projeto sem receita, só com "potencial", o MicroFlip não é pra você. Aqui a gente verifica. Sem exceção.
+Se você tá procurando vender um SaaS que fatura $200k ARR, isso aqui não é pra você. Se você quer especular com projeto sem receita, também não. MicroFlip é pra deals reais, pequenos e verificados.
 
-**Quanto custa:**
+**Acesso vitalício: preço de lançamento.**
 
-O acesso ao MicroFlip sai por **R$ 97** — pagamento único. Sem mensalidade, sem comissão escondida.
+Garantia incondicional de 7 dias. Se você entrar, olhar o marketplace e achar que não vale, pede reembolso. Sem pergunta, sem formulário, sem atrito.
 
-E tem **garantia incondicional de 7 dias.** Se não fizer sentido pra você, pede reembolso. Sem pergunta, sem formulário, sem drama.
+**→ [QUERO ACESSO AO MICROFLIP](https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-22e25c06-85a9-406b-9f7e-88dd1c43dc94)**
 
-**→ [Quero acessar o MicroFlip agora](https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140)**
-
-Esse é o único link. Esse é o único CTA. Porque a decisão é simples: ou você tem um micro-SaaS pra vender (ou quer comprar um), ou não tem.
+Um link. Uma decisão.
 
 Nos vemos lá dentro.
 
-— Equipe MicroFlip
+— [Seu nome]
 
-**P.S.:** Se você já pensou "será que alguém compraria isso?" sobre aquele projetinho que tá parado no seu GitHub... a resposta provavelmente é sim. Só falta colocar na vitrine certa.
+**P.S.** O preço de lançamento é temporário. Eu ainda não sei quando vai subir, mas vai. Se você tá lendo esse email agora, esse é o menor preço que esse acesso vai ter. Depois não adianta me mandar DM pedindo desconto — eu vou te mandar esse email de volta.

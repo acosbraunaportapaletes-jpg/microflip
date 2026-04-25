@@ -4,37 +4,38 @@
 
 ## 1. Assunto
 
-`Seu micro-SaaS parado vale dinheiro. Veja como vender.`
+`Seu micro-SaaS vale mais do que você imagina`
 
 ---
 
 ## 2. Gancho
 
-Você tem um SaaS gerando $200/mês que não toca há 6 meses? Alguém pagaria $5.000 nele hoje. O problema nunca foi falta de comprador — foi falta de lugar certo pra listar.
+Você construiu um SaaS que fatura entre R$2k e R$250k por ano, mas acha que ninguém quer comprar isso. **Errado.** Existe um mercado inteiro de compradores famintos por projetos exatamente desse tamanho — só faltava o lugar certo pra conectar vocês.
 
 ---
 
 ## 3. Highlights
 
-- **Deals de $500 a $50k** — o range que Flippa ignora e Empire Flippers recusa. Aqui é o foco, não exceção.
-- **Receita verificada** — MRR confirmado via Stripe/Paddle antes de qualquer listagem ir ao ar. Zero achismo.
-- **Transação fechada em dias, não meses** — o ticket menor acelera tudo: due diligence, negociação e transferência.
-- **Sem taxa de listagem** — comissão só no deal fechado. Sem risco pra quem lista.
-- **Marketplace curado** — cada projeto passa por triagem. Não é vitrine de side-projects abandonados sem métricas.
+- **Flippa virou terra de ninguém.** Listings inflados, métricas duvidosas e compradores que somem. A confiança acabou.
+- **Acquire.com e Empire Flippers?** Só olham pra quem fatura $100k+. Seu projeto de $5k/mês nem entra na fila.
+- **O "gap" de $500 a $50k é real.** Milhares de micro-SaaS lucrativos ficam presos com fundadores que já perderam o interesse — sem liquidez, sem saída.
+- **Receita verificada muda tudo.** No MicroFlip, cada listing passa por verificação de Stripe, Paddle ou gateway antes de ser publicado. Zero achismo.
+- **Compradores qualificados, não curiosos.** Filtro de intenção + depósito de sinal antes do primeiro contato. Quem aparece quer fechar.
 
 ---
 
 ## 4. Análise
 
-O mercado de aquisições de SaaS tem um buraco no meio. De um lado, Acquire.com e Empire Flippers disputam deals de $100k+. Do outro, o Flippa virou terra de ninguém — bots, métricas infladas e compradores que somem. Quem construiu algo pequeno mas funcional fica sem opção: ou deixa o projeto morrendo no ar, ou vende por centavos num grupo de Telegram. MicroFlip existe pra resolver exatamente esse gap. Um marketplace onde um SaaS de $800/mês de MRR não é "pequeno demais" — é o produto principal.
+O mercado de micro-aquisições está explodindo silenciosamente. Desenvolvedores solo e pequenos times constroem produtos rentáveis em semanas, mas eventualmente perdem o interesse, mudam de foco ou simplesmente querem capital pra próxima ideia. O problema nunca foi falta de demanda — foi falta de infraestrutura. Os marketplaces existentes foram desenhados pra deals de seis ou sete dígitos, e tratam qualquer coisa abaixo disso como ruído. O resultado? Fundadores vendem por migalhas no Twitter ou deixam o projeto morrer.
 
-Pra quem compra, a oportunidade é ainda mais clara. Micro-SaaS com receita verificada entre $500 e $50k são o entry-point mais acessível pra quem quer sair do zero em negócios digitais. Sem precisar levantar rodada, sem precisar montar time, sem precisar de 18 meses de desenvolvimento. Você compra algo que já fatura, melhora o que sabe, e cresce a partir de uma base real. É o modelo de "buy then build" no tamanho certo pra indie hackers e operadores solo.
+O MicroFlip existe pra resolver exatamente isso. A plataforma conecta vendedores de micro-SaaS com compradores sérios num ambiente onde receita é verificada, due diligence é simplificada e o deal fecha em dias, não meses. Pra quem compra, é acesso a projetos com receita real por uma fração do custo de construir do zero. Pra quem vende, é a diferença entre abandonar um projeto e transformá-lo em capital. O sweet spot de $500 a $50k não é limitação — é a maior oportunidade inexplorada do ecossistema SaaS.
 
 ---
 
 ## 5. CTA
 
-**Tem um micro-SaaS parado? Liste grátis no MicroFlip.**
-Quer comprar? Navegue projetos com receita verificada a partir de $500.
+**Tem um micro-SaaS parado gerando receita?** Liste agora no MicroFlip — verificação gratuita, sem taxa até o deal fechar. Compradores já estão procurando projetos como o seu.
 
-👉 **[Acesse o MicroFlip agora](https://microflip.com)** — sem taxa de listagem, sem enrolação.
+**[Criar meu listing no MicroFlip →]**
+
+---

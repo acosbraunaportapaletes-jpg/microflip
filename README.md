@@ -1,6 +1,6 @@
 # MicroFlip
 
-Buy and sell micro-SaaS projects from $500 to $50k — verified revenue.
+Buy and sell micro-SaaS projects from $500 to $50k with verified revenue.
 
 ## How to run
 
@@ -14,12 +14,12 @@ Open http://localhost:5000
 
 ## Features
 
-- **Auth** — Sign up and log in with email + password, secure hash via werkzeug, session cookies
-- **Listings** — Create, edit, and browse listings with title, description, URL, asking price, MRR, stack, screenshot upload
-- **Stripe Verify** — Connect Stripe via OAuth (read-only) to verify real MRR; listings get a "Revenue Verified" badge
-- **Browse & Search** — Public directory with filters by price range, MRR range, stack, and sort by recency/price/MRR
-- **Contact Intent** — Logged-in buyers click "I'm Interested"; seller receives email with buyer's profile and message
-- **Dashboard** — View your listings, verify MRR status, and see all received interest with buyer contact info
+- **Auth** — Register and login with email + password + role (buyer/seller/both), secure hash via werkzeug, session cookies
+- **Listings** — Sellers create listings with title, URL, description, asking price, declared MRR, stack tags, and screenshot URL
+- **Revenue Verify** — Seller connects Stripe via OAuth read-only; system pulls real MRR from last 6 months and displays a "Revenue Verified" badge
+- **Browse & Search** — Public feed with filters by price range, MRR, stack, verified status, and sort by recency/price/MRR
+- **Offer Flow** — Logged-in buyer sends offer (amount + message); seller accepts, rejects, or counter-offers via private thread
+- **Dashboard** — Seller sees their listings + received offers; Buyer sees sent offers with status tracking
 
 ## Stack
 
@@ -30,8 +30,8 @@ Open http://localhost:5000
 ## Next steps
 
 - Escrow payments via Stripe for secure transactions
-- In-app messaging thread between buyer and seller
-- Upload screenshots to S3/Cloudflare R2 instead of local disk
-- Post-sale rating and review system
+- In-app real-time messaging between buyer and seller
+- File uploads to S3/Cloudflare R2 for screenshots
+- Email notifications on new offers and status changes
 - Admin panel for moderation
 - Deploy with Docker + Gunicorn

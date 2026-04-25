@@ -1,0 +1,507 @@
+{
+  "version": "v4",
+  "slug": "microflip",
+  "started_at": "2026-04-24T23:00:27.395767+00:00",
+  "finished_at": "2026-04-24T23:22:15.423568+00:00",
+  "target_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip",
+  "verdict": "CAUTION",
+  "name": "MicroFlip",
+  "pitch": "Buy and sell micro-SaaS projects from $500 to $50k — verified revenue.",
+  "format": "ebook",
+  "price_brl": 47.0,
+  "stages": {
+    "format": {
+      "formato_escolhido": "ebook",
+      "justificativa": "O valor aqui é curadoria + metodologia de como vender/comprar micro-SaaS com segurança — não precisa de backend, precisa de guia prático com frameworks de valuation e lista de canais.",
+      "ticket_sugerido_brl": 47,
+      "nome_comercial": "Exit Guide: Venda Seu SaaS",
+      "slug": "exit-guide-venda-seu-saas",
+      "entregavel_principal": "Ebook PDF com framework de valuation para micro-SaaS, checklist de due diligence, ranking comentado de 12+ plataformas de venda e templates de anúncio prontos.",
+      "bonus_sugestao": "Planilha de valuation automática (Google Sheets) que calcula o valor justo do SaaS baseado em MRR, churn e múltiplo de mercado.",
+      "upsell_futuro": "Pack Premium com templates de contrato de venda, scripts de negociação e acesso a lista curada de buyers ativos atualizada mensalmente (R$97/ano).",
+      "format_meta": {
+        "label": "Ebook PDF",
+        "ticket_brl": [
+          19,
+          67
+        ],
+        "tempo_build_min": 10,
+        "indicador": "ideia é conhecimento/guia/curadoria sem automação"
+      }
+    },
+    "alt_build": {
+      "ok": true,
+      "pdf": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\microflip.pdf",
+      "md": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\ebook.md"
+    },
+    "visuals": {
+      "logo": "visuals\\logo.png",
+      "cover": "visuals\\cover.png",
+      "og_image": "visuals\\og_image.png",
+      "mockup_tablet": "visuals\\mockup_tablet.png",
+      "beneficio_tempo": "visuals\\beneficio_tempo.png",
+      "kit_arquivos": "visuals\\kit_arquivos.png",
+      "workflow_7_passos": "visuals\\workflow_7_passos.png",
+      "selo_garantia": "visuals\\selo_garantia.png",
+      "grafico_crescimento": "visuals\\grafico_crescimento.png",
+      "cnpj_auto": "visuals\\cnpj_auto.png",
+      "call_to_action": "visuals\\call_to_action.png",
+      "depoimentos": "visuals\\depoimentos.png",
+      "mockup_celular": "visuals\\mockup_celular.png",
+      "ferramentas": "visuals\\ferramentas.png",
+      "checklist_visual": "visuals\\checklist_visual.png"
+    },
+    "payment_link": {
+      "ok": true,
+      "preference_id": "197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140",
+      "url": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140",
+      "sandbox_url": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-d4ce1b52-bd0f-4f1f-b3dd-c8dbe3b5b140",
+      "test_mode": false,
+      "external_reference": "microflip"
+    },
+    "landing_v2": {
+      "ok": true
+    },
+    "content_pack_v2": {
+      "files": {
+        "thread_x": "content\\thread_x.txt",
+        "thread_linkedin": "content\\thread_linkedin.txt",
+        "newsletter": "content\\newsletter.md",
+        "email_launch": "content\\email_launch.md",
+        "seo_article": "content\\seo_article.md",
+        "ad_copy": "content\\ad_copy.md",
+        "product_hunt": "content\\product_hunt.md",
+        "reddit_post": "content\\reddit_post.md",
+        "press_release": "content\\press_release.md",
+        "image_prompt": "content\\image_prompt.txt"
+      },
+      "content_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\content"
+    },
+    "deployment": {
+      "steps": [
+        {
+          "stage": "git_commit",
+          "ok": true,
+          "stdout": "[main b19a917] initial build: microflip\n 55 files changed, 1226 insertions(+), 762 deletions(-)\n create mode 100644 assets/cover.png\n create mode 100644 assets/img_beneficio.png\n create mode 100644 assets/img_cases.png\n create mode 100644 assets/img_cta.png\n create mode 100644 assets/img_garantia.png\n create mode 100644 assets/img_mockup.png\n create mode 100644 assets/img_workflow.png\n create mode 100644 assets/logo.png\n create mode 100644 autopilot.json\n create mode 100644 content/ad_copy.md\n create mode 100644 content/email_launch.md\n create mode 100644 content/newsletter.md\n create mode 100644 content/press_release.md\n create mode 100644 content/product_hunt.md\n create mode 100644 content/reddit_post.md\n create mode 100644 content/seo_article.md\n create mode 100644 content/thread_linkedin.txt\n create mode 100644 ebook.md\n create mode 100644 microflip.pdf\n create mode 100644 outreach/candidates.jsonl\n create mode 100644 outreach/messages.jsonl\n delete mode 100644 templates/_messages.html\n delete mode 100644 templates/listing_edit.html\n create mode 100644 templates/listing_form.html\n delete mode 100644 templates/listing_new.html\n delete mode 100644 templates/offer_messages.html\n rename templates/{register.html => signup.html} (53%)\n create mode 100644 visuals/beneficio_tempo.png\n create mode 100644 visuals/call_to_action.png\n create mode 100644 visuals/checklist_visual.png\n create mode 100644 visuals/cnpj_auto.png\n create mode 100644 visuals/cover.png\n create mode 100644 visuals/depoimentos.png\n create mode 100644 visuals/ferramentas.png\n create mode 100644 visuals/grafico_crescimento.png\n create mode 100644 visuals/kit_arquivos.png\n create mode 100644 visuals/logo.png\n create mode 100644 visuals/mockup_celular.png\n create mode 100644 visuals/mockup_tablet.png\n create mode 100644 visuals/og_image.png\n create mode 100644 visuals/selo_garantia.png\n create mode 100644 visuals/workflow_7_passos.png",
+          "stderr": ""
+        },
+        {
+          "stage": "github_push",
+          "ok": true,
+          "repo_url": "https://github.com/acosbraunaportapaletes-jpg/microflip",
+          "clone_url": "https://github.com/acosbraunaportapaletes-jpg/microflip.git"
+        },
+        {
+          "stage": "vercel",
+          "ok": false,
+          "reason": "PROJECT_CREATE",
+          "detail": {
+            "error": {
+              "code": "bad_request",
+              "message": "Failed to link acosbraunaportapaletes-jpg/microflip. You need to add a Login Connection to your GitHub account first.",
+              "action": "Add a Login Connection",
+              "link": "https://vercel.com/docs/accounts/create-an-account#login-methods-and-connections",
+              "repo": "acosbraunaportapaletes-jpg/microflip"
+            }
+          }
+        }
+      ],
+      "repo_url": "https://github.com/acosbraunaportapaletes-jpg/microflip",
+      "expected_url": null,
+      "ok": true
+    },
+    "deep_intel": {
+      "ok": true,
+      "queries_analisadas": 3
+    },
+    "deep_debate": {
+      "agent_opinions": {
+        "Engineer": {
+          "score": 6,
+          "veredito": "CAUTION",
+          "principal_insight": "O MVP (listings + pagamento) é tecnicamente simples e entregável em 1 semana, mas o escrow — que é o diferencial de confiança — adiciona complexidade regulatória e de integração que pode triplicar o tempo real.",
+          "red_flags": [
+            "Escrow exige integração com terceiros (Stripe Connect, Payoneer) e compliance financeiro que NÃO cabe em 1 semana de forma segura",
+            "Verificação de receita dos micro-SaaS (conectar Stripe/Paddle do vendedor) é frágil, fácil de fraudar, e cada integração é manutenção contínua",
+            "Marketplace two-sided tem cold start brutal — precisa de supply E demand simultaneamente, o que é problema de growth, não de código"
+          ],
+          "green_flags": [
+            "Stack técnica é trivial: CRUD de listings + auth + dashboard — um dev full-stack entrega o core em 3-5 dias",
+            "Modelo commission-based elimina fricção de onboarding e pode usar Stripe Connect para split automático",
+            "Escopo pode ser cortado radicalmente no MVP: listings + contato direto (sem escrow), validando demanda antes de construir a parte difícil"
+          ],
+          "recommendation": "Lance em 1 semana um MVP sem escrow próprio — apenas listings verificados + chat entre partes + link para escrow terceirizado (Escrow.com API) — e só construa escrow nativo quando tiver 20+ deals fechados provando tração.",
+          "weight": 0.15,
+          "emoji": "🔧"
+        },
+        "User": {
+          "score": 4,
+          "veredito": "NOGO",
+          "principal_insight": "O ICP (indie hacker com micro-SaaS de $500-$50k) tem volume de transações muito baixo e frequência quase zero — cada founder vende no máximo 1-2x na vida, tornando CAC insustentável sem efeito de rede já estabelecido.",
+          "red_flags": [
+            "Acquire.com já pivotou pra cobrir esse segmento e tem marca/trust construídos — competir por curadoria contra quem já tem deal flow é uphill battle",
+            "Mercado de dois lados com chicken-and-egg brutal: compradores só vêm se houver listings bons, sellers só listam se houver compradores — e o TAM admitido é baixo",
+            "Willingness-to-pay real é próxima de zero: sellers nessa faixa comparam com Flippa grátis e SideProjectors grátis — commission de 5-10% sobre deal de $2k ($100-200) não paga nem o custo de escrow/suporte"
+          ],
+          "green_flags": [
+            "Dor de trust com Flippa é real e validada — há frustração genuína no mercado",
+            "Nicho sub-$50k é de fato mal servido pelos players premium como Empire Flippers",
+            "Modelo commission-based alinha incentivos e reduz barreira de entrada"
+          ],
+          "recommendation": "Não construa um marketplace standalone — o unit economics de deals pequenos com baixa frequência não fecha; se quiser atacar essa dor, considere ser uma feature/plugin dentro de uma comunidade existente (ex: integração com IndieHackers ou HackerNews) onde o deal flow já existe.",
+          "weight": 0.2,
+          "emoji": "🎯"
+        },
+        "Growth": {
+          "score": 5,
+          "veredito": "CAUTION",
+          "principal_insight": "O nicho tem aquisição orgânica barata via comunidades indie hacker, mas o loop de viralidade é fraco — transações são eventos raros e únicos, não geram recompra nem referral natural.",
+          "red_flags": [
+            "Frequência de transação baixíssima: um founder vende 1-2x na vida, não há repeat purchase nem retenção — seu LTV depende de um único evento",
+            "CAC vs ticket médio desfavorável: deals de $500-$5k geram comissão de $25-$500, o que limita severamente quanto você pode gastar pra adquirir cada lado do marketplace",
+            "Cold start de marketplace bilateral: precisa de listagens de qualidade pra atrair compradores E compradores pra atrair sellers — sem volume inicial, nenhum dos lados aparece"
+          ],
+          "green_flags": [
+            "Aquisição do primeiro cliente é barata: indie hackers se concentram em poucos canais previsíveis (Twitter/X, HN, Reddit r/SideProject, IndieHackers) com alto engajamento orgânico",
+            "Produto tem built-in PR: cada deal fechado é um mini case-study compartilhável ('vendi meu SaaS por $12k no MicroFlip') que gera buzz orgânico pontual",
+            "Concorrentes incumbentes deixaram gap claro de trust no segmento sub-$50k, facilitando posicionamento diferenciado sem precisar competir em budget de marketing"
+          ],
+          "recommendation": "Só avance se resolver o problema de frequência: pivote de marketplace puro para comunidade com marketplace embutido (newsletter, deal flow curado, conteúdo de valuation) — isso cria retenção e repeat engagement mesmo entre transações, transformando o canal de aquisição em canal de retenção.",
+          "weight": 0.2,
+          "emoji": "📈"
+        },
+        "Risk": {
+          "score": 3,
+          "veredito": "NOGO",
+          "principal_insight": "O risco binário que mata o produto é o chicken-and-egg de liquidez: sem sellers não há buyers e vice-versa, num TAM que você mesmo classificou como 'baixo' — e esse problema é irreversível porque cada mês sem transações queima credibilidade permanentemente.",
+          "red_flags": [
+            "Acquire.com já ocupa exatamente esse nicho com brand forte, base instalada e custo zero pra listar — competir com grátis cobrando listing fee é suicídio em mercado pequeno",
+            "Marketplace de transações baixas ($500-$50k) tem unit economics frágil: 5-10% de comissão sobre deal de $2k = $100-200, insuficiente pra cobrir custo de escrow, disputas e suporte que trust exige",
+            "O problema de 'trust' que matou Flippa não se resolve com código — exige escrow regulado, verificação financeira e reputação construída em anos, criando barreira de execução brutal pra um novo entrante"
+          ],
+          "green_flags": [
+            "Dor real e validada: founders realmente reclamam do gap entre Flippa (lixo) e Empire Flippers (caro demais)",
+            "Nicho indie hacker tem comunidade vocal e concentrada (Twitter/X, HN), facilitando distribuição inicial",
+            "Modelo commission-based alinha incentivos e reduz barreira de entrada pra sellers"
+          ],
+          "recommendation": "Não construa um marketplace — o cold start problem em TAM baixo com concorrente grátis (Acquire.com) é uma armadilha mortal; se insistir no espaço, pivote pra um serviço de broker/concierge cobrando flat fee por deal fechado, eliminando o problema de liquidez.",
+          "weight": 0.2,
+          "emoji": "⚠️"
+        },
+        "CFO": {
+          "score": 4,
+          "veredito": "NOGO",
+          "principal_insight": "Unit economics de marketplace de tickets baixos ($500-$50k) com commission de 5-10% gera revenue por transação de $25-$5k, exigindo volume altíssimo que esse nicho não comporta — o CAC para atrair sellers qualificados em mercado de trust é proibitivo vs. o ticket médio.",
+          "red_flags": [
+            "LTV projetado é baixíssimo: seller típico faz 1-2 transações na vida, buyer talvez 2-3 — com take rate de 5-10% sobre deals de $2-15k (média realista), LTV fica em $150-$1.5k por usuário, insuficiente para justificar CAC de marketplace two-sided",
+            "Payback period inviável: marketplaces de confiança exigem investimento pesado em escrow, vetting, e brand building ANTES de monetizar — estimativa de 18-36 meses para break-even com burn mensal de $3-8k mínimo em infra + ads",
+            "TAM reconhecidamente baixo pelo próprio research — com concorrentes gratuitos (Acquire, SideProjectors) e o Acquire.com já dominando o segmento adjacente, o custo de aquisição por listing qualificado pode ultrapassar a receita que ele gera"
+          ],
+          "green_flags": [
+            "Modelo commission-based alinha incentivos e reduz barreira de entrada vs. listing fee",
+            "Dor real de trust gap existe — quem resolve escrow + vetting captura margem premium",
+            "Custo de construção do MVP é baixo (marketplace simples), permitindo teste rápido antes de comprometer capital"
+          ],
+          "recommendation": "Não construa um marketplace standalone — o ROI não fecha; se quiser explorar essa dor, valide como feature/serviço de escrow white-label para comunidades existentes (IndieHackers, Twitter indie) cobrando flat fee de $200-500 por transação assistida, eliminando o problema de chicken-and-egg e testando willingness-to-pay real com <$500 de investimento.",
+          "weight": 0.25,
+          "emoji": "💼"
+        }
+      },
+      "consolidated": {
+        "final_score": 4.3,
+        "variance": 3,
+        "consenso": "alto",
+        "veredito_final": "NOGO",
+        "synthesis_insight": "O marketplace de micro-SaaS sub-$50k tem dor real de trust, mas unit economics quebrado: transações raras, tickets baixos e cold start bilateral num TAM pequeno com concorrente grátis (Acquire.com) tornam o modelo inviável como produto standalone.",
+        "top_risk": "Chicken-and-egg de liquidez em TAM baixo com concorrente grátis — cada mês sem transações queima credibilidade permanentemente, e o volume necessário para fechar unit economics simplesmente não existe nesse nicho.",
+        "top_opportunity": "Dor de trust no gap entre Flippa (baixa qualidade) e Empire Flippers (ticket mínimo alto) é real e validada, com comunidade indie hacker concentrada em poucos canais de distribuição orgânica barata.",
+        "action_recommended": "Pivote para serviço de broker/concierge com flat fee de $300-500 por deal assistido, operando dentro de comunidades existentes (IndieHackers, Twitter/X indie) — elimina cold start, testa willingness-to-pay real com <$500 de investimento, e só escala para marketplace se provar tração com 20+ deals fechados."
+      },
+      "n_agents": 5
+    },
+    "memory_lookup": {
+      "found_similar": 0
+    },
+    "deliverable_pdf": {
+      "ok": true,
+      "pdf_path": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\deliverables\\MicroFlip.pdf",
+      "size_kb": 15
+    },
+    "listings": {
+      "gumroad": {
+        "ok": true,
+        "product_id": "cdWyRf-fHepNSrYVlUFCCA==",
+        "name": "MicroFlip",
+        "short_url": "https://nathanfer0.gumroad.com/l/microflip",
+        "custom_permalink": "microflip",
+        "edit_url": "https://nathanfer0.gumroad.com/products/cdWyRf-fHepNSrYVlUFCCA==",
+        "published": true,
+        "gh_download_url": null
+      },
+      "mp_payment_link": {
+        "ok": true,
+        "preference_id": "197881458-c1a3c563-0b43-4a1a-ae44-f123b90255e7",
+        "url": "https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-c1a3c563-0b43-4a1a-ae44-f123b90255e7",
+        "sandbox_url": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=197881458-c1a3c563-0b43-4a1a-ae44-f123b90255e7",
+        "test_mode": false,
+        "external_reference": "microflip"
+      },
+      "kiwify": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\listings\\kiwify_draft.md"
+      },
+      "eduzz": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\listings\\eduzz_draft.md"
+      },
+      "hotmart": {
+        "ok": true,
+        "note": "draft gerado",
+        "file": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\listings\\hotmart_draft.md"
+      },
+      "mercadolivre": {
+        "ok": false,
+        "api_error": {
+          "message": "Validation error",
+          "error": "validation_error",
+          "status": 400,
+          "cause": [
+            {
+              "department": "items",
+              "cause_id": 363,
+              "type": "warning",
+              "code": "item.attribute.dropped",
+              "references": [
+                "item.attributes"
+              ],
+              "message": "Attribute: GTIN was dropped because its values is empty"
+            },
+            {
+              "department": "items",
+              "cause_id": 303,
+              "type": "warning",
+              "code": "item.attributes.ignored",
+              "references": [
+                "item.attributes"
+              ],
+              "message": "Attribute [DESCRIPTIVE_TAGS] ignored because it is not modifiable."
+            },
+            {
+              "department": "items",
+              "cause_id": 303,
+              "type": "warning",
+              "code": "item.attributes.ignored",
+              "references": [
+                "item.attributes"
+              ],
+              "message": "Attribute [CATALOG_TITLE] ignored because it is not modifiable."
+            },
+            {
+              "department": "structured-data",
+              "cause_id": 3705,
+              "type": "error",
+              "code": "item.title.minimum_length",
+              "references": [
+                "item.title"
+              ],
+              "message": "Inclua características importantes do produto, como marca, modelo ou categoria."
+            }
+          ]
+        },
+        "fallback_draft": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\listings\\mercadolivre_draft.md"
+      }
+    },
+    "outreach": {
+      "ok": true,
+      "n_candidates": 0,
+      "n_messages": 0,
+      "outreach_dir": "G:\\Meu Drive\\bot24h_shared\\saas_builds\\microflip\\outreach"
+    },
+    "memory": {
+      "ok": true,
+      "recorded": true
+    },
+    "debate": {
+      "agent_opinions": {
+        "User": {
+          "score": 2,
+          "veredito": "NOGO",
+          "principal_insight": "O produto é um ebook de R$47 sobre um marketplace — o cliente real (indie hacker querendo comprar/vender micro-SaaS) quer a PLATAFORMA com escrow e deal flow, não um PDF explicando como fazer isso manualmente.",
+          "red_flags": [
+            "Desconexão total entre formato (ebook) e job-to-be-done (transacionar com segurança) — ninguém paga R$47 por um guia quando precisa de um marketplace funcional",
+            "ICP (indie hacker técnico) já conhece Flippa, Acquire e alternativas — a informação do ebook é facilmente encontrável grátis no Twitter/IH/YouTube",
+            "Willingness-to-pay por conteúdo informacional nesse nicho é ~zero; o WTP real está na transação (commission/listing fee), que o ebook não captura"
+          ],
+          "green_flags": [
+            "O problema subjacente é real — gap genuíno no mercado $500-$50k com verificação de receita",
+            "Nicho específico e bem definido, o que facilita targeting"
+          ],
+          "recommendation": "Abandone o formato ebook e valide o marketplace real com uma lista curada no Airtable + grupo Telegram cobrando listing fee de $29-49 — isso resolve o job-to-be-done; o ebook não resolve nada.",
+          "weight": 0.2,
+          "emoji": "🎯"
+        },
+        "Engineer": {
+          "score": 3,
+          "veredito": "NOGO",
+          "principal_insight": "O produto é um ebook de R$47 sobre um marketplace que exigiria escrow, verificação de receita e dispute resolution — o ebook não resolve o problema real, e o marketplace real não se faz em 1 semana.",
+          "red_flags": [
+            "Incoerência produto-problema: o problema pede um marketplace com trust (escrow, revenue verification), mas o formato é ebook — não entrega valor funcional",
+            "Se for marketplace de verdade: escrow, KYC, integração com Stripe/analytics para verificar MRR, sistema de disputas — são meses de engenharia, não 1 semana",
+            "Manutenção pesadíssima: marketplace financeiro exige compliance, mediação de disputas, prevenção de fraude — custo operacional incompatível com ticket de R$47"
+          ],
+          "green_flags": [
+            "Gap real no mercado entre $500-$50k existe e é reconhecido pela comunidade indie hacker",
+            "Se for só ebook/guia, a execução técnica em si é trivial (landing page + checkout + PDF)"
+          ],
+          "recommendation": "Decida o que é: se é ebook, o problema que resolve é educacional e não de marketplace — reposicione como guia prático de como fazer exit de micro-SaaS usando plataformas existentes; se é marketplace, descarte o formato ebook e planeje 3-6 meses de engenharia com funding adequado.",
+          "weight": 0.15,
+          "emoji": "🔧"
+        },
+        "Risk": {
+          "score": 3,
+          "veredito": "NOGO",
+          "principal_insight": "Um ebook de R$47 não resolve o problema central do nicho (confiança transacional e escrow), e o mercado já tem players gratuitos ou baratos que dominam o discovery — você estaria vendendo teoria sobre um mercado que exige infraestrutura.",
+          "red_flags": [
+            "Acquire.com é gratuito para listar e já domina o mindshare indie hacker — competir com conteúdo estático contra uma plataforma funcional é assimetria fatal",
+            "O TAM é autoproclamado 'baixo' e o público (solo founders) é pequeno, vocal mas notoriamente resistente a pagar por info-products quando a info circula grátis no Twitter/IndieHackers",
+            "Formato ebook não entrega o que o problema exige: verificação de receita, escrow, due diligence — o risco binário é irrelevância total porque o produto não toca na dor real"
+          ],
+          "green_flags": [
+            "Custo de produção próximo de zero — se falhar, a perda financeira é mínima",
+            "Existe frustração real e documentada com Flippa e gaps no range $500-$50k",
+            "Preço baixo (R$47) reduz fricção de compra e permite testar demanda rápido"
+          ],
+          "recommendation": "Se insistir no tema, pivote para uma curadoria paga (newsletter/comunidade) que conecte compradores e vendedores com deals verificados — o valor está na rede e na confiança, não num PDF.",
+          "weight": 0.2,
+          "emoji": "⚠️"
+        },
+        "CFO": {
+          "score": 3,
+          "veredito": "NOGO",
+          "principal_insight": "Um ebook de R$47 sobre compra/venda de micro-SaaS tem unit economics insustentáveis: CAC estimado de R$25-40 via ads para nicho ultra-específico, deixando margem líquida de R$7-22 por venda — payback negativo se considerar custo de produção.",
+          "red_flags": [
+            "TAM reconhecidamente baixo + nicho anglófono sendo atacado com produto em reais = audiência minúscula; LTV é flat em R$47 sem upsell claro",
+            "CAC tende a ser alto porque 'indie hacker querendo flip de micro-SaaS' é um targeting difícil em ads — CPM caro, conversão baixa, ROI negativo projetado",
+            "O produto (ebook) não resolve o problema identificado (falta de marketplace confiável) — há um mismatch fatal entre a dor e a solução oferecida"
+          ],
+          "green_flags": [
+            "Custo de construção baixo (é um ebook, não uma plataforma)",
+            "Dor real e validada pelo declínio de credibilidade do Flippa e gap no segmento $500-$50k"
+          ],
+          "recommendation": "Não invista em ads para este ebook — se quiser explorar o nicho, construa o marketplace com modelo commission-based (5-10%) onde o LTV por cliente é ordens de magnitude maior e o produto de fato resolve a dor identificada.",
+          "weight": 0.25,
+          "emoji": "💼"
+        },
+        "Growth": {
+          "score": 3,
+          "veredito": "NOGO",
+          "principal_insight": "Um ebook de R$47 sobre compra/venda de micro-SaaS não tem loop de viralização natural — quem compra não compartilha (é vantagem competitiva guardar o conhecimento), e o TAM de indie hackers brasileiros dispostos a pagar por isso é minúsculo.",
+          "red_flags": [
+            "Nicho ultra-pequeno: indie hackers que fazem flip de micro-SaaS no Brasil é uma fatia ínfima — CAC via ads será proibitivo (CPC alto em nicho tech, conversão baixa pra ebook de R$47)",
+            "Zero viralidade orgânica: comprador de ebook sobre flipping não tem incentivo para divulgar — quanto menos gente souber, menos concorrência nos deals",
+            "Canal de aquisição caro e saturado: Twitter/X indie hacker e comunidades como IndieHackers.com já estão inundados de conteúdo gratuito sobre o tema — competir com conteúdo free do próprio Acquire.com e blogs é uphill battle"
+          ],
+          "green_flags": [
+            "Produto digital sem custo marginal — se achar o canal certo, margem é 95%+",
+            "Pode funcionar como lead magnet barato pra um produto maior (curso, comunidade paga, ou o próprio marketplace)",
+            "Nicho tem alta intent de compra — quem busca 'como vender micro-SaaS' está com dinheiro na mesa"
+          ],
+          "recommendation": "Não lance como produto standalone a R$47 — use o ebook como lead magnet gratuito para validar demanda e construir lista, depois monetize com um serviço de maior ticket (consultoria de exit, comunidade de deal flow, ou o próprio marketplace com listing fee).",
+          "weight": 0.2,
+          "emoji": "📈"
+        }
+      },
+      "consolidated": {
+        "final_score": 2.8,
+        "variance": 1.0,
+        "consenso": "alto",
+        "veredito_final": "NOGO",
+        "synthesis_insight": "O problema identificado (marketplace confiável para micro-SaaS $500-$50k) é real, mas o formato proposto (ebook R$47) não toca na dor central — é como vender um manual de natação para quem está pedindo um barco.",
+        "top_risk": "Mismatch fatal entre formato (ebook estático) e job-to-be-done (transacionar com confiança via escrow e verificação de receita) — o produto é estruturalmente incapaz de resolver o problema que justifica sua existência.",
+        "top_opportunity": "Gap genuíno e validado no segmento $500-$50k com frustração documentada contra Flippa — a dor existe, só precisa do veículo certo.",
+        "action_recommended": "Pivote para um MVP de curadoria: lista verificada de deals em Airtable + grupo Telegram/Discord com listing fee de $29-49, usando o ebook como lead magnet gratuito para construir a rede — monetize na transação (commission 5-10%), não no conteúdo."
+      },
+      "n_agents": 5
+    },
+    "web_intel": {
+      "query": "MicroFlip Onde vender um SaaS fazendo 500-5k/mês? Flippa é duvidoso, Acquire não pega. Vou",
+      "generated_at": "2026-04-24T23:22:15.303563+00:00",
+      "web_results_count": 0,
+      "reddit_results_count": 10,
+      "hn_results_count": 0,
+      "reddit_engagement_total": 28038,
+      "reddit_recent_90d_count": 6,
+      "hn_total_points": 0,
+      "pain_signals_count": 3,
+      "signals": {
+        "demand_strong": true,
+        "pain_present": true,
+        "visibility": false
+      },
+      "samples": {
+        "web": [],
+        "reddit": [
+          {
+            "title": "A eutanásia deve ser um direito individual e não um crime.",
+            "subreddit": "opiniaopopular",
+            "url": "https://reddit.com/r/opiniaopopular/comments/1s5kz1q/a_eutanásia_deve_ser_um_direito_individual_e_não/",
+            "score": 3396,
+            "comments": 697,
+            "text": "Vou dividir alguns argumentos que demonstram porque o direito a eutanásia é algo justificável e moral. Lá vem textão...\n\n1 - A vontade do ser humano de viver vai muito além da mera existência ou do mero fato de estar vivo, basta observar como a população mundial deseja e realiza coisas que vão muito além de necessidades biológicas básicas ( ex: respirar, comer, dormir, defecar, etc ). Ou seja, querer forçar alguém a viver nesse mundo apenas com o objetivo da pessoa existir, não possui justificat",
+            "created_utc": 1774655920.0
+          },
+          {
+            "title": "\"Livre negociação entre patrão e funcionário\" é uma farsa para iludir a classe trabalhadora e perpetuar uma exploração exaustiva.",
+            "subreddit": "opiniaopopular",
+            "url": "https://reddit.com/r/opiniaopopular/comments/1sn51bo/livre_negociação_entre_patrão_e_funcionário_é_uma/",
+            "score": 2123,
+            "comments": 586,
+            "text": "A direita tenta vender essa narrativa de \"livre negociação entre patrão e funcionário\" para o trabalhador pensar que tem algum \"poder de escolha\" e \"liberdade\" de melhorar sua condição de trabalho SEM ser pela lei, logo o convencendo que o fim da escala 6x1 é \"desnecessário\" pois \"bastaria\" falar com o patrão. Porém isso é uma farsa e vou explicar o porque de forma lógica...\n\n1 - A classe empresarial está atualmente com medo do hipotético fim da escala 6x1 porque pensam que isso \"iria diminuir d",
+            "created_utc": 1776349425.0
+          },
+          {
+            "title": "Mulheres que agridem homens nunca são punidas",
+            "subreddit": "InfernoSocial",
+            "url": "https://reddit.com/r/InfernoSocial/comments/1qqwkks/mulheres_que_agridem_homens_nunca_são_punidas/",
+            "score": 2155,
+            "comments": 629,
+            "text": "Essas duas mulheres atacaram o motorista com vários chutes nas costas dele. Cadê a polícia aprendendo elas?\n\nA verdade é essa, a América Latina por ser um continente absolutamente machista, onde famílias acham engraçado ver a Dona Florinda dá tapa na cara do seu Madruga, quando ele não fez nem nada pra merecer apanhar.\n\nOu seja sua madruga apanha é caluniado, América Latina inteira acha graça.\n\nSe fosse o contrário o seu madruga batendo na Dona Florinda ninguém ia achar graça.\n\nÉ sempre assim, e",
+            "created_utc": 1769750425.0
+          }
+        ],
+        "hn": [],
+        "pain_examples": [
+          {
+            "title": "A eutanásia deve ser um direito individual e não um crime.",
+            "subreddit": "opiniaopopular",
+            "url": "https://reddit.com/r/opiniaopopular/comments/1s5kz1q/a_eutanásia_deve_ser_um_direito_individual_e_não/",
+            "score": 3396,
+            "comments": 697,
+            "text": "Vou dividir alguns argumentos que demonstram porque o direito a eutanásia é algo justificável e moral. Lá vem textão...\n\n1 - A vontade do ser humano de viver vai muito além da mera existência ou do mero fato de estar vivo, basta observar como a população mundial deseja e realiza coisas que vão muito além de necessidades biológicas básicas ( ex: respirar, comer, dormir, defecar, etc ). Ou seja, querer forçar alguém a viver nesse mundo apenas com o objetivo da pessoa existir, não possui justificat",
+            "created_utc": 1774655920.0
+          },
+          {
+            "title": "Fumantes são sem noção e deveria existir uma legislação mais rígida sobre",
+            "subreddit": "opiniaoimpopular",
+            "url": "https://reddit.com/r/opiniaoimpopular/comments/1pmmk4i/fumantes_são_sem_noção_e_deveria_existir_uma/",
+            "score": 2526,
+            "comments": 677,
+            "text": "A maioria dos fumantes (na minha percepção, que cresceu com família de fumantes) não tem nenhuma noção sobre o incômodo que causa em pessoas não fumantes.\n\nPrimeiro q, não vou entrar na questão de SAÚDE onde você está obrigando a alguém fumar passivamente. \n\n“A mas é só sair de perto” desculpa, você está usando uma substância TÓXICA e eu devo sair de perto? \n\nSegundo, e esse é o ponto q mais me incomoda, o fato dos fumantes não saberem o alcance da fumaça. Tem pesquisas q mostram que a fumaça do",
+            "created_utc": 1765740303.0
+          },
+          {
+            "title": "Lula não é burro e nem analfabeto",
+            "subreddit": "opiniaoimpopular",
+            "url": "https://reddit.com/r/opiniaoimpopular/comments/1quptpn/lula_não_é_burro_e_nem_analfabeto/",
+            "score": 1456,
+            "comments": 823,
+            "text": "Antes de me atacar, leia até o fim. Não pra concordar, pra entender o argumento.\n\nQuando alguém chama o Lula de “burro” ou “analfabeto”, não está fazendo uma crítica política. Está fazendo uma afirmação simbólica. A ideia de que inteligência só existe quando vem com diploma, vocabulário bonito, sotaque certo e validação da elite. Fora disso, vira ignorância.\n\nO Lula não teve formação escolar longa porque saiu cedo da escola pra trabalhar. Isso impõe limites, claro. Mas também cria outro tipo de ",
+            "created_utc": 1770119220.0
+          }
+        ]
+      }
+    }
+  }
+}

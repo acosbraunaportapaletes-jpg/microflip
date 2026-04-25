@@ -1,43 +1,31 @@
-Here's the post:
+Here's the Reddit post:
 
 ---
 
-**Title:** I spent 2 years building micro-SaaS projects and the hardest part was never building — it was selling
+**Title:** I spent 6 months trying to sell a $4k MRR micro-SaaS and it was hell
 
 **Body:**
 
-Last year I had three small SaaS projects running. A simple invoicing tool doing $800/mo, a niche scheduling app at $400/mo, and a Chrome extension pulling in $200/mo. I was stretched thin and needed to let go of at least two to focus.
+Last year I built a small SaaS that tracked inventory for local bakeries. Nothing fancy — $4k MRR, 38 paying customers, solid churn. I loved building it but I was burning out and wanted to move on to something new.
 
-So I tried to sell them.
+So I tried to sell it.
 
-And that's when I realized how broken the market is for small projects.
+First stop: Flippa. Listed it, got 47 "offers" in a week. About 40 were lowballers who clearly didn't read the listing. The rest wanted me to provide 6 months of bank statements, Google Analytics, Stripe screenshots, and a partridge in a pear tree — only to ghost me after. The whole experience felt like Craigslist for software.
 
-I listed the invoicing tool on Flippa. Got 40+ messages — almost all lowballers, tire-kickers, or people who clearly had no intention of buying. One guy wanted me to "prove" my Stripe revenue by giving him my login credentials. The whole experience felt like selling a car on Craigslist at 2am.
+Then I looked at Acquire.com. Nice platform, but my deal was too small for anyone to care. I sat there for 3 months with maybe 2 serious conversations. Both fell through because there was zero structure around due diligence or escrow at that price range.
 
-Then I looked at Acquire.com and Empire Flippers. Both great platforms, but they're optimized for $100k+ deals. My little $800/mo SaaS? Not worth their time. I get it — the economics don't make sense for them to vet and broker a $15k transaction.
+Empire Flippers? They literally told me to come back when I hit $50k+ in annual net profit. Fair enough, that's their market.
 
-But here's the thing: there are thousands of developers sitting on small projects doing $500-$5k/mo that they've lost interest in or don't have time for. And there are thousands of buyers — first-time founders, people wanting to skip the 0-to-1 phase, small portfolio operators — who would happily pay $5k-$50k for a project with real, verified revenue.
+I ended up selling through a Twitter DM to someone I kind of knew. We used a Google Doc as our "contract." It worked out, but honestly it could have gone sideways so easily.
 
-There's just no trustworthy place to connect them.
+That experience stuck with me. There are thousands of solo devs and indie hackers building small profitable tools — the kind that make $500 to $50k — and there's genuinely no good place to buy or sell them. The big marketplaces either don't care about you or have become so noisy that trust is gone.
 
-I ended up selling one project through a Twitter DM after posting a screenshot of my Stripe dashboard. No escrow, no verification, no structure. It worked out fine, but it easily could have gone sideways.
+So I started working on MicroFlip. The idea is simple: a marketplace specifically for micro-SaaS in the $500–$50k range with verified revenue. No vanity metrics, no "potential" listings. If your Stripe says $2k MRR, that's what the buyer sees. Built-in escrow, standardized due diligence, and a process designed for deals that close in days, not months.
 
-That experience is what led me to build MicroFlip. It's a marketplace specifically for micro-SaaS deals in the $500-$50k range. The core idea is simple: every listing has verified revenue (we connect directly to Stripe/Paddle/etc.), there's a built-in escrow process, and the fee structure actually makes sense for small transactions.
+I'm not trying to compete with the big guys. I just think this segment is completely underserved and the current options range from "sketchy" to "non-existent."
 
-We're not trying to compete with the bigger platforms. We're trying to serve the segment they deliberately ignore.
-
-It's still early — been live for a few months, and we're learning a ton about what buyers and sellers actually need at this price point. Things like: how much code documentation matters for sub-$10k deals, whether buyers prefer asset sales vs. full transfers, how to handle projects with no formal entity behind them.
-
-Curious to hear from this community: have any of you tried selling a small SaaS project? What was your experience like? And if you've bought one — what made you pull the trigger vs. just building from scratch?
+But I'm genuinely curious — for those of you who've sold (or tried to sell) a small project: what was the hardest part? Was it finding buyers, building trust, handling the transfer, or something else entirely? I want to make sure I'm not just solving my own problem here.
 
 ---
 
-**Notes on the approach:**
-- Opens with a personal story, not a pitch
-- Names competitors honestly and respectfully — acknowledges they're good, just not for this segment
-- Introduces the product naturally as a consequence of the problem
-- Closes with a genuine, open-ended question that invites discussion
-- ~1,900 characters, within range
-- No links, no CTAs, no "check us out" energy
-
-Want me to adjust the tone, length, or angle?
+~2,100 characters. Personal story first, problem second, product mention is organic and brief, ends with an open question that invites real discussion without feeling like a pitch.

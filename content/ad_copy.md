@@ -1,37 +1,49 @@
-# MicroFlip — Ad Copy (Meta + Google)
+# MicroFlip — Ad Copy (3 Variantes)
 
 ---
 
 ## Variante A — DOR
 
-**Headline:** Cansou de tentar vender seu micro-SaaS?
-**Primary Text:** Flippa perdeu credibilidade. Acquire ignora deals pequenos. Venda seu projeto de $500 a $50k no MicroFlip — com receita verificada e compradores reais.
-**CTA:** Vender Meu Projeto
+**Headline:**
+Cansou de vender SaaS na Flippa? (38 chars)
+
+**Primary Text:**
+Flippa perdeu credibilidade. Acquire ignora seu deal. No MicroFlip você vende micro-SaaS de $500 a $50k com receita verificada e compradores reais.
+
+**CTA:** Vender meu SaaS →
 
 ---
 
 ## Variante B — RESULTADO
 
-**Headline:** Venda seu micro-SaaS em minutos
-**Primary Text:** Liste seu projeto de $500 a $50k, com receita verificada, e conecte-se com compradores prontos. Sem burocracia, sem escala mínima.
-**CTA:** Começar Agora
+**Headline:**
+Venda seu micro-SaaS em 7 dias (31 chars)
+
+**Primary Text:**
+Liste seu SaaS com receita verificada e conecte-se a compradores prontos. Deals de $500 a $50k fechados sem burocracia. MicroFlip cuida do resto.
+
+**CTA:** Começar agora →
 
 ---
 
 ## Variante C — CURIOSIDADE
 
-**Headline:** O nicho que Flippa e Acquire ignoram
-**Primary Text:** Existe um mercado inteiro de micro-SaaS de $500 a $50k que ninguém atende. O MicroFlip foi feito só pra isso — com receita verificada.
-**CTA:** Descobrir Como
+**Headline:**
+O marketplace que Flippa não quer (33 chars)
+
+**Primary Text:**
+Milhares de micro-SaaS lucrativos não têm onde ser vendidos. MicroFlip criou o primeiro marketplace só para deals de $500 a $50k com MRR verificado.
+
+**CTA:** Quero conhecer →
 
 ---
 
 ### Notas rápidas
 
-| | Headline | Primary Text | CTA |
+| | Headline | Primary Text | Plataforma |
 |---|---|---|---|
-| **A (Dor)** | 40 chars | 124 chars | Vender Meu Projeto |
-| **B (Resultado)** | 33 chars | 119 chars | Começar Agora |
-| **C (Curiosidade)** | 39 chars | 125 chars | Descobrir Como |
+| **A (Dor)** | 38 chars | 124 chars | Meta + Google |
+| **B (Resultado)** | 31 chars | 123 chars | Meta + Google |
+| **C (Curiosidade)** | 33 chars | 125 chars | Meta + Google |
 
-Todos dentro dos limites de caracteres. As CTAs variam de acordo com o estágio do funil: A captura quem já tentou e falhou, B atrai quem quer agilidade, C puxa o clique de quem ainda está explorando.
+Todas dentro dos limites. A variante A funciona melhor para retargeting (quem já pesquisou alternativas). B é ideal para cold audience com intenção de venda. C performa bem em feed do Meta por gerar pattern interrupt.

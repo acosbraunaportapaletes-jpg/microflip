@@ -1,12 +1,12 @@
-Pronto. Ebook completo salvo em `MicroFlip-Ebook.md`.
+Ebook completo salvo em `MicroFlip-Ebook.md`. 
 
-**Estrutura entregue:**
-- **Introdução** — O problema do buraco de $500-$50k no mercado
-- **Cap 1: Avaliação** — Fórmula de múltiplo, o que sobe/desce o preço, cálculo de SDE com exemplo real
-- **Cap 2: Processo de Venda** — Preparação, onde listar, template de listing, negociação, escrow, contrato, transferência
-- **Cap 3: Processo de Compra** — Por que comprar, due diligence em 3 níveis, pós-aquisição, modelo de flipping com exemplo numérico
-- **Cap 4: Checklist** — 20 itens (10 vendedor, 10 comprador)
-- **Cap 5: Próximos Passos** — Plano de ação semanal pra vendedor, comprador e operador recorrente
-- **Sobre o Autor**
+Estrutura entregue:
+- **Introdução** — o gap de $500-$50k e pra quem é
+- **Cap 1** — O mercado invisível: perfis de compradores/vendedores, por que marketplaces existentes falham
+- **Cap 2** — Valuation (múltiplos SDE com tabela), cálculo prático, due diligence em 4 níveis, red flags, ferramentas
+- **Cap 3** — Execução completa das 7 etapas: NDA, deal memo, LOI, APA, escrow, transferência de ativos (com checklists), suporte pós-venda, template de email pros clientes, estruturas de pagamento
+- **Cap 4** — Checklist prático: 17 itens pra vendedores + 15 itens pra compradores
+- **Cap 5** — Próximos passos com timeline semanal, buy box template, modelo de portfólio com exemplo numérico, riscos reais
+- **Sobre o autor**
 
-~25 páginas equivalentes, tom direto, exemplos concretos com números, zero fluff.
+~25 páginas equivalentes, tom direto e prático, com templates, tabelas e exemplos concretos prontos pra uso.

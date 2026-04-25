@@ -3,26 +3,28 @@
 {% block content %}
 <h1 class="text-2xl font-bold text-white mb-6">Dashboard</h1>
 
+{% if current_user.role in ('seller', 'both') %}
 <section class="mb-10">
     <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-semibold text-white">My Listings</h2>
         <a href="/listings/new" class="text-emerald-400 hover:text-emerald-300 text-sm">+ New Listing</a>
     </div>
-    {% if listings %}
+    {% if my_listings %}
     <div class="space-y-3">
-        {% for l in listings %}
+        {% for l in my_listings %}
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4 flex items-center justify-between">
             <div>
                 <a href="/listings/{{ l.id }}" class="text-white font-semibold hover:text-emerald-400">{{ l.title }}</a>
                 <span class="status-badge status-{{ l.status }} ml-2">{{ l.status }}</span>
                 <span class="text-neutral-500 text-sm ml-2">{{ l.asking_price_usd|usd }}</span>
-                {% if l.stripe_verified %}<span class="badge-verified ml-2">Revenue Verified</span>{% endif %}
+                {% if l.verified %}<span class="badge-verified ml-2">Revenue Verified</span>{% endif %}
             </div>
             <div class="flex gap-3 items-center">
-                {% if not l.stripe_verified %}
-                <a href="/connect/stripe?listing_id={{ l.id }}" class="text-blue-400 hover:text-blue-300 text-xs">Verify MRR</a>
+                {% if not l.verified and l.status == 'active' %}
+                <form action="/listings/{{ l.id }}/verify" method="post" class="inline">
+                    <button class="text-blue-400 hover:text-blue-300 text-xs">Verify MRR</button>
+                </form>
                 {% endif %}
-                <a href="/listings/{{ l.id }}/edit" class="text-neutral-400 hover:text-white text-sm">Edit</a>
             </div>
         </div>
         {% endfor %}
@@ -32,29 +34,78 @@
     {% endif %}
 </section>
 
-<section>
-    <h2 class="text-lg font-semibold text-white mb-4">Interest Received</h2>
-    {% if intents %}
+<section class="mb-10">
+    <h2 class="text-lg font-semibold text-white mb-4">Offers Received</h2>
+    {% if received_offers %}
     <div class="space-y-3">
-        {% for i in intents %}
+        {% for o in received_offers %}
         <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
             <div class="flex items-center justify-between">
                 <div>
-                    <span class="text-white font-semibold">{{ i.buyer_name }}</span>
-                    <span class="text-neutral-500 text-sm ml-2">interested in</span>
-                    <span class="text-emerald-400 text-sm ml-1">{{ i.listing_title }}</span>
+                    <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
+                    <span class="text-neutral-500 text-sm ml-2">on</span>
+                    <span class="text-white text-sm ml-1">{{ o.listing_title }}</span>
+                    <span class="offer-{{ o.status }} text-xs font-semibold uppercase ml-2">{{ o.status }}</span>
                 </div>
-                <div class="text-neutral-500 text-xs">{{ i.created_at|timeago }}</div>
+                <span class="text-neutral-500 text-xs">{{ o.created_at|timeago }}</span>
             </div>
-            {% if i.message %}
-            <p class="text-neutral-400 text-sm mt-2">"{{ i.message }}"</p>
+            <p class="text-neutral-500 text-xs mt-1">from {{ o.buyer_email }}</p>
+            {% if o.message %}
+            <p class="text-neutral-400 text-sm mt-2">"{{ o.message }}"</p>
             {% endif %}
-            <p class="text-neutral-500 text-xs mt-2">Contact: <a href="mailto:{{ i.buyer_email }}" class="text-emerald-400 hover:underline">{{ i.buyer_email }}</a></p>
+
+            {% if o.status == 'pending' %}
+            <div class="flex gap-2 mt-3 items-center">
+                <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                    <input type="hidden" name="action" value="accept">
+                    <button class="bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-1 rounded text-xs">Accept</button>
+                </form>
+                <form action="/offers/{{ o.id }}/respond" method="post" class="inline">
+                    <input type="hidden" name="action" value="reject">
+                    <button class="bg-red-800 hover:bg-red-700 text-white px-3 py-1 rounded text-xs">Reject</button>
+                </form>
+                <form action="/offers/{{ o.id }}/respond" method="post" class="inline flex gap-2 items-center">
+                    <input type="hidden" name="action" value="counter">
+                    <input type="number" name="counter_amount" min="1" placeholder="Counter $" required class="bg-neutral-800 border border-neutral-700 rounded px-2 py-1 text-white text-xs w-24 focus:outline-none">
+                    <input type="text" name="counter_message" placeholder="Message" class="bg-neutral-800 border border-neutral-700 rounded px-2 py-1 text-white text-xs w-32 focus:outline-none">
+                    <button class="bg-blue-700 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs">Counter</button>
+                </form>
+            </div>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
     {% else %}
-    <p class="text-neutral-500 text-sm">No interest received yet.</p>
+    <p class="text-neutral-500 text-sm">No offers received yet.</p>
     {% endif %}
 </section>
+{% endif %}
+
+{% if current_user.role in ('buyer', 'both') %}
+<section>
+    <h2 class="text-lg font-semibold text-white mb-4">My Offers</h2>
+    {% if sent_offers %}
+    <div class="space-y-3">
+        {% for o in sent_offers %}
+        <div class="bg-neutral-900 border border-neutral-800 rounded-lg p-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-emerald-400 font-semibold">{{ o.amount_usd|usd }}</span>
+                    <span class="text-neutral-500 text-sm ml-2">on</span>
+                    <a href="/listings/{{ o.listing_id }}" class="text-white text-sm ml-1 hover:text-emerald-400">{{ o.listing_title }}</a>
+                    <span class="offer-{{ o.status }} text-xs font-semibold uppercase ml-2">{{ o.status }}</span>
+                </div>
+                <span class="text-neutral-500 text-xs">{{ o.created_at|timeago }}</span>
+            </div>
+            {% if o.message %}
+            <p class="text-neutral-400 text-sm mt-2">"{{ o.message }}"</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-neutral-500 text-sm">No offers sent yet. <a href="/listings" class="text-emerald-400 hover:underline">Browse listings</a>.</p>
+    {% endif %}
+</section>
+{% endif %}
 {% endblock %}
